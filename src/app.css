@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark light;
+  hanging-punctuation: first last;
+  /* scroll-snap-type: y mandatory;
+  scroll-padding-top: 50px; */
+}
+
+/* section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+} */
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-display: optional;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.blueShadow {
+  box-shadow: 0px 14px 55px rgba(109, 40, 217, 0.45);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
+}
+
+/* .specialSpin {
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.blur-load {
+  background-size: cover;
+  background-position: center;
+}
+
+.img {
+  object-position: center;
+  object-fit: cover;
+} */
