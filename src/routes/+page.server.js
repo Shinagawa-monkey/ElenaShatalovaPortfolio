@@ -39,15 +39,24 @@
 // 	}
 // };
 
+import { kv } from "@vercel/kv";
 import { fail, redirect  } from '@sveltejs/kit';
 
 export const actions = {
 	default: async ({request}) => {
         const formData = await request.formData();
 
-        const name = formData.get('name');
+        // const name = formData.get('name');
         const email = formData.get('email');
-        const message = formData.get('message');
+        // const message = formData.get('message');
+
+        const contactData = { 
+            name: formData.get('name'), 
+            email: email, 
+            message: formData.get('message') 
+        };
+
+        console.log(contactData);
 
         // if (!name.trim() || !name || typeof username !=='string') {
 		// 	return fail(400, { name, missingName: true });
@@ -74,9 +83,10 @@ export const actions = {
          });
 		};
 
-        const contactData = { name, email, message };
+        // const contactData = { name, email, message };
 
-        console.log(contactData);
+        // console.log(contactData);
+        await kv.set(email, contactData);
         return { success: true};
         //redirect(303, '/');
 	}
