@@ -11,6 +11,10 @@
 
   export let form;
   // export let data;
+  // $: data.contacts
+  // $: ({contacts} = data);
+
+
   // let submitted = false;
   // $: loading = submitted && !$page.form?.success
   let submitted = false;
@@ -297,12 +301,14 @@
       <label for="name" class="sr-only">Name *</label>
       <input type="text" id="name" name="name" value={form?.name?.value ?? ''} placeholder="Name *" aria-label="Name" class="poppins p-2 bg-transparent border border-solid border-violet-700 rounded-lg group hover:border-violet-400 duration-200 transition-height focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} required />
       <!-- {#if form?.missingName}<p class="error text-xs mt-1">The name field is required</p>{/if} -->
+      
       <p class="error text-xs mt-1 min-h-5 text-red-400">{form?.name?.error ?? ''}</p>
     
       <label for="email" class="sr-only">Email *</label>
       <input type="email" id="email" name="email" value={form?.email?.value ?? ''} placeholder="Email *" aria-label="Email" class="poppins p-2 bg-transparent border border-solid border-violet-700 rounded-lg group hover:border-violet-400 duration-200 transition-height focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} required />
       <!-- {#if form?.missingEmail}<p class="error text-xs mt-1">The email field is required</p>{/if} -->
-       <p class="error text-xs mt-1 min-h-5 text-red-400">{form?.email?.error ?? ''}</p>
+       
+      <p class="error text-xs mt-1 min-h-5 text-red-400">{form?.email?.error ?? ''}</p>
       
       <label for="message" class="sr-only">Message</label>
       <textarea id="message" name="message" value={form?.message?.value ?? ''} placeholder="Message" aria-label="Message" rows="6" class="poppins mb-5 p-2 bg-transparent border border-solid border-violet-700 rounded-lg group hover:border-violet-400 duration-200 transition-height focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0}></textarea>
