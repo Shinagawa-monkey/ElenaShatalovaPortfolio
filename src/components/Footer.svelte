@@ -68,7 +68,7 @@
 </script> -->
 
 <script>
-  import { isMenuOpen } from '../lib/menuStore';
+  import { isMenuOpen } from '$lib/menuStore';
 </script>
 
 <footer class="py-5 sm:py-10 bg-black border-t border-solid border-violet-950 flex flex-col gap-2 sm:gap-4 justify-center items-center">

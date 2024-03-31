@@ -2,27 +2,21 @@
   // https://scottspence.com/posts/contact-form-send-email-from-site
   // https://www.loganwilliams.tech/posts/first-post
 
+  //Vershion short code: 78.5 desktop 45.7 mobile
+
   import Step from "../components/Step.svelte"
   import { onMount, afterUpdate, onDestroy } from 'svelte';
   import { isMenuOpen } from '$lib/menuStore';
   // import { theme } from '$lib/theme';
+  //import { page } from "$app/stores";
   import { enhance } from "$app/forms";
-  import { page } from "$app/stores";
 
   export let form;
-  // export let data;
-  // $: data.contacts
-  // $: ({contacts} = data);
-
-
-  // let submitted = false;
-  // $: loading = submitted && !$page.form?.success
   let submitted = false;
   let loading = false;
   let successMessage = "";
 
-  // Function to handle form submission
-  async function handleSubmit(event) {
+  const handleSubmit = async (event) => {
     // event.preventDefault();
 
     // Set loading to true to display "Sending message..." text
@@ -41,14 +35,14 @@
     successMessage = "Thank you ✨";
 
     // Reset form after submission
-    event.target.reset();
+    // event.target.reset();
 
     // Clear success message after some time
     setTimeout(() => {
       // Revert the button text to "Work With Me"
       submitted = false;
-    }, 5000);
-}
+    }, 3000);
+  }
 
   let projectImagesDark = [
     ["/images/projectImages/tastyTreatsDark1.jpg", "/images/projectImages/tastyTreatsDark2.jpg", "/images/projectImages/tastyTreatsDark3.jpg", "/images/projectImages/tastyTreatsDark4.jpg"],
@@ -275,68 +269,29 @@
     <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">Let's <span class="poppins text-violet-400">Connect</span></h3>
   </div>
 
-  <!-- <div class="flex flex-col mb-10 mx-auto">
-    <div class="flex justify-center items-center">
-      <form action="https://getform.io/f/qalppdga" method="POST" class="flex flex-col w-full md:w-[800px] z-10">
-        <input type="text" name="name" placeholder="Name" class="p-2 bg-transparent border-2 rounded-md focus:outline-none">
-        <input type="email" name="email" placeholder="Email" class="my-2 p-2 bg-transparent border-2 rounded-md focus:outline-none">
-        <textarea name="message" placeholder="Message" rows="10" class="mb-4 p-2 bg-transparent border-2 rounded-md focus:outline-none"></textarea>
-        // add hidden Honeypot input to prevent spams
-        <input type="hidden" name="_gotcha" style="display:none !important">
-        <button aria-label="Work With Me" class="text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-yellow-500 to-pink-500 drop-shadow-md hover:stroke-white">
-          Work With Me
-        </button>
-      </form>
-    </div>
-  </div> -->
-
-  <!-- pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}$" title="must be a valid email address" OR pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}" title="must be a valid email address" -->
   <div class="flex justify-center">
-    <!-- <form method="POST" on:submit|preventDefault={handleSubmit} class="flex flex-col w-full max-w-sm md:max-w-md lg:max-w-lg z-10"> -->
-      <!-- <form method="POST" class="flex flex-col w-full md:w-[800px] z-10" use:enhance on:submit={() => submitted = true}> -->
-        <form method="POST" class="flex flex-col w-full md:w-[800px] z-10" use:enhance on:submit|preventDefault={handleSubmit}>
-      
+    <form method="POST" class="flex flex-col w-full md:w-[800px]" use:enhance on:submit={handleSubmit}>
       <p class="text-sm poppins font-normal leading-none text-slate-400 mb-2">* indicates required field</p>
-      
+  
       <label for="name" class="sr-only">Name *</label>
-      <input type="text" id="name" name="name" value={form?.name?.value ?? ''} placeholder="Name *" aria-label="Name" class="poppins p-2 bg-transparent border border-solid border-violet-700 rounded-lg group hover:border-violet-400 duration-200 transition-height focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} required />
-      <!-- {#if form?.missingName}<p class="error text-xs mt-1">The name field is required</p>{/if} -->
-      
-      <p class="error text-xs mt-1 min-h-5 text-red-400">{form?.name?.error ?? ''}</p>
-    
+      <input type="text" id="name" name="name" value={form?.contact?.name?.value ?? ''} placeholder="Name *" aria-label="Name" class="poppins p-2 bg-transparent border border-solid border-violet-700 rounded-lg group hover:border-violet-400 duration-200 transition-height focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} required />
+      <p class="error text-xs mt-1 min-h-5 text-red-400">{form?.nameError ?? ''}</p>
+  
       <label for="email" class="sr-only">Email *</label>
-      <input type="email" id="email" name="email" value={form?.email?.value ?? ''} placeholder="Email *" aria-label="Email" class="poppins p-2 bg-transparent border border-solid border-violet-700 rounded-lg group hover:border-violet-400 duration-200 transition-height focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} required />
-      <!-- {#if form?.missingEmail}<p class="error text-xs mt-1">The email field is required</p>{/if} -->
-       
-      <p class="error text-xs mt-1 min-h-5 text-red-400">{form?.email?.error ?? ''}</p>
-      
+      <input type="email" id="email" name="email" value={form?.contact?.email?.value ?? ''} placeholder="Email *" aria-label="Email" class="poppins p-2 bg-transparent border border-solid border-violet-700 rounded-lg group hover:border-violet-400 duration-200 transition-height focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} required />
+      <p class="error text-xs mt-1 min-h-5 text-red-400">{form?.emailError ?? ''}</p>
+  
       <label for="message" class="sr-only">Message</label>
-      <textarea id="message" name="message" value={form?.message?.value ?? ''} placeholder="Message" aria-label="Message" rows="6" class="poppins mb-5 p-2 bg-transparent border border-solid border-violet-700 rounded-lg group hover:border-violet-400 duration-200 transition-height focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0}></textarea>
-
+      <textarea id="message" name="message" value={form?.contact?.message?.value ?? ''} placeholder="Message" aria-label="Message" rows="6" class="poppins mb-5 p-2 bg-transparent border border-solid border-violet-700 rounded-lg group hover:border-violet-400 duration-200 transition-height focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0}></textarea>
+  
       <div class="flex justify-start">
-        <!-- <button type="submit" aria-label="Work With Me" disabled={form?.name || form?.email} class="text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-gray-100 text-slate-950 cursor-pointer z-10 hover:bg-gray-200 duration-200 group/ContactBtn whitespace-nowrap" tabindex={$isMenuOpen ? -1 : 0}>
-          <div class="absolute top-0 right-full w-full h-full bg-violet-800 opacity-20 group-hover/ContactBtn:translate-x-full z-0 duration-200"></div>
-          <h4>Work With Me</h4>
-        </button> -->
-        <!-- <button type="submit" aria-label="Work With Me" class:submitted class:loading class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-gray-100 text-slate-950 cursor-pointer z-10 hover:bg-gray-200 duration-200 group/ContactBtn whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} disabled={submitted}>
-          <div class="absolute top-0 right-full w-full h-full bg-violet-800 opacity-20 group-hover/ContactBtn:translate-x-full z-0 duration-200"></div>
-          <h4>{$page.form?.success? 'Tank you ✨': loading ? 'Sending message' : 'Work With Me'}</h4>
-        </button> -->
-        <button type="submit" aria-label="Work With Me" class:loading class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-gray-100 text-slate-950 cursor-pointer z-10 hover:bg-gray-200 duration-200 group/ContactBtn whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} disabled={loading}>
-          <div class="absolute top-0 right-full w-full h-full bg-violet-800 opacity-20 group-hover/ContactBtn:translate-x-full z-0 duration-200"></div>
-          <h4>{submitted ? successMessage : loading ? 'Sending message' : 'Work With Me'}</h4>
+        <button type="submit" aria-label="Work With Me" class:submitted class:loading class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-gray-100 text-slate-950 cursor-pointer z-10 hover:bg-gray-200 duration-200 group/ContactBtn whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} disabled={loading}>
+            <div class="absolute top-0 right-full w-full h-full bg-violet-800 opacity-20 group-hover/ContactBtn:translate-x-full z-0 duration-200"></div>
+            <h4>{submitted ? successMessage : loading ? 'Sending message' : 'Work With Me'}</h4>
         </button>
       </div>
-
-      <!-- {#if form?.success}
-	    // this message is ephemeral; it exists because the page was rendered in response to a form submission. it will vanish if the user reloads
-	    <p>Successfully send a message {data.message}</p>
-      {/if} -->
-
     </form>
   </div>
-
-  
   
 </section>
 

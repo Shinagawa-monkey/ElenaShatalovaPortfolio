@@ -268,73 +268,187 @@ import { fail } from '@sveltejs/kit';
 import { transporter } from '$lib/emailSetup.server.js';
 import { GOOGLE_EMAIL,GOOGLE_EMAIL_BCC } from '$env/static/private';
 
+function validateContact(contactData) {
+    if (!contactData.name && !contactData.email) {
+        return { 
+            success: false, 
+            nameAndEmailError: "Name and email are required." 
+        };
+    }
+    
+    if (!contactData.name) {
+        return { 
+            success: false, 
+            nameError: 'The name field is required' 
+        };
+    }
+
+    if (!contactData.email) {
+        return { 
+            // name: {value: contactData.name, error: null },
+            success: false,
+            emailError: 'The email field is required'
+        }
+    }
+
+    return {
+        success: true,
+        contact: {
+            name: contactData.name,
+            email: contactData.email,
+            message: contactData.message || ''
+        }
+    };
+}
+
+async function sendEmail(messageToSend) {
+    return new Promise((resolve, reject) => {
+        transporter.sendMail(messageToSend, (err, info) => {
+            if (err) {
+                console.error(err);
+                reject(err);
+            } else {
+                resolve(info);
+            }
+        });
+    });
+}
+
 export const actions = {
     default: async ({ request }) => {
         try {
         const formData = await request.formData();
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const message = formData.get('message');
+        const contactData = {
+            // id: crypto.randomUUID(),
+            name: formData.get('name') ?? '',
+            email: formData.get('email') ?? '',
+            message: formData.get('message') ?? ''
+        }
+        
+        const validation = validateContact(contactData);
 
-        // if (!name.trim() || !name || typeof name !=='string') {
-		// 	return fail(400, { 
-        //         name: {
-        //             value: name,
-        //             error: 'The name field is required'
-        //     } 
-        //  });
-		// };
-
-
-        // if (!email.trim() || !email || typeof email !=='string') {
-		// 	return fail(400, { 
-        //         name: {value: name, error: null }, 
-        //         email: {
-        //             value: email,
-        //             error: 'The email field is required'
-        //     } 
-        //  });
-		// };
+        if (!validation.success) {
+            return fail(400, { error: validation.nameAndEmailError, nameError: validation.nameError, emailError: validation.emailError, ...contactData });
+        }
 
         let html = `
             <h2>Hello there!</h2>
-            <p>You've received a message from ${name} (${email}):</p>
-            <pre>${message ? message : 'Message field is empty'}</pre>
+            <p>You've received a message from ${contactData.name} (${contactData.email}):</p>
+            <pre>${contactData.message || 'Message field is empty'}</pre>
         `;
-
+    
         const messageToSend = {
             from: GOOGLE_EMAIL,
             to: GOOGLE_EMAIL,
             bcc: GOOGLE_EMAIL_BCC,
             subject: 'Portfolio client inquiry',
-            text: message,
+            text: contactData.message,
             html: html,
         };
 
-        const sendEmail = async (messageToSend) => {
-            await new Promise((resolve, reject) => {
-                transporter.sendMail(messageToSend, (err, info) => {
-                    if (err) {
-                        console.error(err);
-                        reject(err);
-                    } else {
-                        resolve(info);
-                    }
-                });
-            });
-        };
+        // const sendEmail = async (messageToSend) => {
+        //     await new Promise((resolve, reject) => {
+        //         transporter.sendMail(messageToSend, (err, info) => {
+        //             if (err) {
+        //                 console.error(err);
+        //                 reject(err);
+        //             } else {
+        //                 resolve(info);
+        //             }
+        //         });
+        //     });
+        // };
 
             await sendEmail(messageToSend);
 
-            // return {
-            //     success: "Email is sent",
-            // };
-            return { success: true };
+            return { success: true, status: 200, body: { message: 'Form submitted successfully' }, contact: validation.contact };
 
         } catch (error) {
-            // console.error(error);
-            return { success: false, error: error.message };
-            // return fail(500, { success: false, error: "Internal server error: Failed to process the request." });
+            return { success: false, status: 500, body: { message: 'Internal server error' } };
         }
     }
 }
+
+// import { fail } from '@sveltejs/kit';
+// import { transporter } from '$lib/emailSetup.server.js';
+// import { GOOGLE_EMAIL,GOOGLE_EMAIL_BCC } from '$env/static/private';
+
+// async function sendEmail(messageToSend) {
+//     return new Promise((resolve, reject) => {
+//         transporter.sendMail(messageToSend, (err, info) => {
+//             if (err) {
+//                 console.error(err);
+//                 reject(err);
+//             } else {
+//                 resolve(info);
+//             }
+//         });
+//     });
+// }
+
+// export const actions = {
+//     default: async ({ request }) => {
+//         try {
+//         const formData = await request.formData();
+//             // id: crypto.randomUUID();
+//             userName: formData.get('name') ?? '';
+//             email: formData.get('email') ?? '';
+//             message: formData.get('message') ?? '';
+
+//             if (!userName || typeof userName !== 'string') {
+//                 return fail(400, { 
+//                     userName: {
+//                         value: userName,
+//                         error: 'The name field is required'
+//                     } 
+//                 });
+//             }
+
+//             if (!email || typeof email !== 'string') {
+//                 return fail(400, {
+//                     userNamename: {value: userName, error: null }, 
+//                     email: {
+//                     value: email,
+//                     error: 'The email field is required'
+//                     }  
+//                 });
+//             }
+        
+
+//         let html = `
+//             <h2>Hello there!</h2>
+//             <p>You've received a message from ${userNamename} (${email}):</p>
+//             <pre>${message || 'Message field is empty'}</pre>
+//         `;
+
+//         const messageToSend = {
+//             from: GOOGLE_EMAIL,
+//             to: GOOGLE_EMAIL,
+//             bcc: GOOGLE_EMAIL_BCC,
+//             subject: 'Portfolio client inquiry',
+//             text: message,
+//             html: html,
+//         };
+
+//             await sendEmail(messageToSend);
+
+//             return {
+//                 success: true,
+//                 status: 200,
+//                 body: { message: 'Form submitted successfully' },
+//                 contact: {
+//                     name: userName,
+//                     email: email,
+//                     message: message || ''
+//                 }
+//             };
+
+//         } catch (error) {
+//             return {
+//                 success: false,
+//                 status: 500,
+//                 body: { message: 'Internal server error' }
+//             };
+//         }
+//     }
+// };

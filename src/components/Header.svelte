@@ -106,13 +106,13 @@
       </li>
       </ul>
     </div>
-    <!-- Hamburger Button - removed focus:outline-none -->
+    <!-- Hamburger Button - class={`z-30 block md:hidden hamburger focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50 ${isOpen && y > 0 ? 'open-sticky' : ''}`} -->
     <button 
       bind:this={btn}
       on:click={navToggle} 
       class:open={isOpen}
       id="btn"
-      class={`z-30 block md:hidden hamburger focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50 ${isOpen && y > 0 ? 'open-sticky' : ''}`}
+      class={`z-30 block md:hidden hamburger focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50 ${isOpen && y > 0 ? 'open-sticky' : ''}`}
       aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
       aria-expanded={isOpen ? 'true' : 'false'}
       aria-controls="menu"      
@@ -129,7 +129,7 @@
         {#each tabs as tab, index}
           <li>
             <div class="w-full py-3 text-center">
-              <a href={tab.link} class="block duration-200 hover:text-violet-400 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50" target={index === 2 ? "_blank" : ""}>
+              <a href={tab.link} class="block duration-200 hover:text-violet-400 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50" target={index === 3 ? "_blank" : ""}>
                 <span>{tab.name}</span>
               </a>
             </div>
