@@ -61,7 +61,7 @@
     <div class="flex flex-col gap-2">
       <ul class="flex flex-wrap gap-2">
         {#each step.technologies.split(', ') as tag}
-          <li class="bg-violet-700 text-white px-3 py-1 rounded-full shadow-md text-sm sm:text-base">{tag}</li>
+          <li class="bg-violet-700 text-white px-3 py-1 rounded-full shadow-md text-sm sm:text-base whitespace-nowrap">{tag}</li>
         {/each}
       </ul>
     </div>
@@ -80,7 +80,7 @@
       {/if}
     </button> -->
 
-    <button on:click={toggleShowMore} aria-label={showMore ? "Show Less" : "Read More"} class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-violet-500 text-slate-950 cursor-pointer z-10 hover:bg-violet-600 duration-200 group/expandBtn whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0}>
+    <button on:click={toggleShowMore} aria-label={showMore ? "Show Less" : "Read More"} class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-violet-500 text-slate-950 cursor-pointer z-10 hover:bg-violet-600 duration-200 group/expandBtn focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" tabindex={$isMenuOpen ? -1 : 0}>
       <div class="absolute top-0 right-full w-full h-full bg-gray-200 opacity-20 group-hover/expandBtn:translate-x-full z-0 duration-200"></div>
       {#if showMore}
         <span>Show Less</span>
@@ -92,7 +92,7 @@
     </button>
     
     
-    <a href={step.href} target="_blank" aria-label={"Go to " + step.name} class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-gray-100 text-slate-950 cursor-pointer z-10 hover:bg-gray-200 duration-200 group/GoToBtn whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0}>
+    <a href={step.href} target="_blank" aria-label={"Go to " + step.name} class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-gray-100 text-slate-950 cursor-pointer z-10 hover:bg-gray-200 duration-200 group/GoToBtn focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" tabindex={$isMenuOpen ? -1 : 0}>
       <div class="absolute top-0 right-full w-full h-full bg-violet-800 opacity-20 group-hover/GoToBtn:translate-x-full z-0 duration-200"></div>
       <h4>Go to &rarr;</h4>
     </a>

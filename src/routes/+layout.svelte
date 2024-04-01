@@ -32,9 +32,15 @@
 </script>
 
 <div class="relative flex flex-col max-w-[1400px] mx-auto w-full text-sm sm:text-base min-h-screen" class:dark={$theme === 'dark'}>
-  <div class={"fixed bottom-0 w-full duration-200 flex p-10 z-[10] " + (y > 0 ? ' opacity-full pointer-events-auto' : ' opacity-0 pointer-events-none')}>
+  <!-- <div class={"fixed bottom-0 w-full duration-200 flex p-10 z-[10] " + (y > 0 ? ' opacity-full pointer-events-auto' : ' opacity-0 pointer-events-none')}>
     <button on:click={goTop} class="ml-auto rounded-full aspect-square bg-slate-900 text-violet-400 px-3 sm:px-4 hover:bg-slate-800 cursor-pointer grid place-items-center focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} aria-label="Scroll to top">
       <i class="fa-solid fa-arrow-up" />
+    </button>
+  </div>   sm:bottom-10-->
+
+  <div class={"fixed bottom-5 sm:bottom-10 right-4 duration-200 z-[10] " + (y > 0 ? ' opacity-full pointer-events-auto' : ' opacity-0 pointer-events-none')}>
+    <button on:click={goTop} class="rounded-full aspect-square bg-slate-900 text-violet-400 px-3 sm:px-4 hover:bg-slate-800 cursor-pointer grid place-items-center focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up" />
     </button>
   </div>
   <Header {y} {innerHeight} {theme}/>
