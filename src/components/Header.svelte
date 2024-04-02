@@ -125,8 +125,7 @@
     </button>
   </div>
   <!-- Mobile Menu -->
-  <!-- <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full h-full m-h-screen opacity-90 bg-slate-950 md:hidden"> -->
-    <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class={"fixed inset-0 z-[2] hidden self-end w-full h-full m-h-screen opacity-90 bg-slate-950 md:hidden " + isOpen ? "min-h-svh" : ""}>
+  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full h-full m-h-screen opacity-90 bg-slate-950 md:hidden" class:open-mobile={$isOpen}>
     <ul class="flex-col items-center px-4 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-slate-400">
       {#if !$page.error && $page.url.pathname === '/'}
         {#each tabs as tab, index}
@@ -217,6 +216,11 @@
   .open .hamburger-bottom {
     transform: rotate(-45deg) translateY(6px) translateX(-6px);
     background-color: #fff;
+  }
+
+  .open-mobile {
+    min-height: 100vh;
+    min-height: 100svh;
   }
       
   /* .open-sticky {
