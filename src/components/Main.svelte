@@ -7,6 +7,7 @@
   import Step from "../components/Step.svelte"
   import { onMount, afterUpdate, onDestroy } from 'svelte';
   import { isMenuOpen } from '$lib/menuStore';
+  import Swiper from "swiper";
   // import { theme } from '$lib/theme';
   //import { page } from "$app/stores";
   import { enhance } from "$app/forms";
