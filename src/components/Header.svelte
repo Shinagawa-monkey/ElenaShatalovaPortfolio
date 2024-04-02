@@ -41,38 +41,6 @@
   };
 
   let btn, menu, logo;
-
-
-
-
-
-  // Add debounce function
-  function debounce(func, wait, immediate) {
-    let timeout;
-    return function() {
-      const context = this,
-        args = arguments;
-      const later = function() {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      const callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    };
-  }
-
-  // Define scroll handler
-  const handleScroll = () => {
-    y = window.scrollY;
-  };
-
-  // Debounced scroll event listener
-  const debouncedScrollHandler = debounce(handleScroll, 100);
-
-
-
   
   onMount(() => {
     window.addEventListener('resize', handleResize);
@@ -82,7 +50,6 @@
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', debouncedScrollHandler);
     };
   });
 
