@@ -69,12 +69,10 @@
   };
 </script>
 
- 
-<!-- <header class={"sticky z-[2] top-0 duration-200 px-4 flex items-center justify-between border-b border-solid " + (y > 0 ? " py-4 bg-slate-950 border-violet-950" : " py-6 bg-transparent border-transparent")}> -->
-  <header class={"sticky z-[2] top-0 duration-200 px-4 flex items-center justify-between border-b border-solid " + (y > 0 && !isOpen ? " py-4 bg-slate-950 border-violet-950" : " py-6 bg-transparent border-transparent")}>
 
+<header class={"sticky z-[11] top-0 duration-200 px-4 flex items-center justify-between border-b border-solid " + (y > 0 ? " py-4 bg-slate-950 border-violet-950" : " py-6 bg-transparent border-transparent")}>
   <div class="flex items-center justify-between w-full">
-    <h1 bind:this={logo} class="font-medium z-[3]" id="logo" aria-label="Logo: Elena Shatalova">
+    <h1 bind:this={logo} class="font-medium z-30" id="logo" aria-label="Logo: Elena Shatalova">
       <b class="font-bold poppins">Elena</b> Shatalova
     </h1>
     <!-- Menu Items -->
@@ -92,8 +90,8 @@
       
       <li class="flex items-center justify-center">
         <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank"  class="font-medium blueShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-slate-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap">
-          <div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
-          <span class="relative z-[1]">Get in touch</span>
+          <div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"></div>
+          <span class="relative z-9">Get in touch</span>
         </a>
       </li>
       
@@ -114,7 +112,7 @@
       on:click={navToggle} 
       class:open={isOpen}
       id="btn"
-      class={`z-[3] block md:hidden hamburger focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50 ${isOpen && y > 0 ? 'top-6' : ''}`}
+      class={`z-30 block md:hidden hamburger focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50 ${isOpen && y > 0 ? 'open-sticky' : ''}`}
       aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
       aria-expanded={isOpen ? 'true' : 'false'}
       aria-controls="menu"      
@@ -125,7 +123,7 @@
     </button>
   </div>
   <!-- Mobile Menu -->
-  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full h-full m-h-screen opacity-90 bg-slate-950 md:hidden">
+  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-20 hidden self-end w-full h-full m-h-screen opacity-90 bg-slate-950 md:hidden">
     <ul class="flex-col items-center px-4 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-slate-400">
       {#if !$page.error && $page.url.pathname === '/'}
         {#each tabs as tab, index}
@@ -142,8 +140,8 @@
     <div class="flex items-center justify-center w-full px-5 py-3 gap-4">
       <li>
         <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" class="font-medium block blueShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-slate-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap">
-          <div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
-            <h4 class="relative z-[1]">Get in touch</h4>
+          <div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"></div>
+            <h4 class="relative z-9">Get in touch</h4>
         </a>
       </li>
       
@@ -218,9 +216,9 @@
     background-color: #fff;
   }
       
-  /* .open-sticky {
-    top: 24px;
-  } */
+  .open-sticky {
+    top: 16px;
+  }
 
   /* Media query for screens of 640 pixels and smaller */
   @media (max-width: 640px) {

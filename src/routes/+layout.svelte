@@ -38,7 +38,7 @@
     </button>
   </div>   sm:bottom-10-->
 
-  <div class={"fixed bottom-5 sm:bottom-10 right-4 duration-200 z-[1] " + (y > 0 ? ' opacity-full pointer-events-auto' : ' opacity-0 pointer-events-none')}>
+  <div class={"fixed bottom-5 sm:bottom-10 right-4 duration-200 z-[10] " + (y > 0 ? ' opacity-full pointer-events-auto' : ' opacity-0 pointer-events-none')}>
     <button on:click={goTop} class="rounded-full aspect-square bg-slate-900 text-violet-400 px-3 sm:px-4 hover:bg-slate-800 cursor-pointer grid place-items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} aria-label="Scroll to top">
         <i class="fa-solid fa-arrow-up" />
     </button>
