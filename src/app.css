@@ -18,16 +18,15 @@ html {
 * {
   font-family: "Roboto", sans-serif;
   font-display: optional;
+
+  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* body {
+body {
   min-height: 100vh;
   min-height: 100svh;
-} */
-
-body {
-  height: 100vh;
-  height: 100svh;
 }
 
 img {
