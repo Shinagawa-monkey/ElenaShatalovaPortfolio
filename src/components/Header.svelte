@@ -167,7 +167,7 @@
 
 <style>
   .mob-menu {
-    bottom: calc((120vh - 100%));
+    top: calc(50px + (120vh - 100%));
   }
 
   .hamburger {
