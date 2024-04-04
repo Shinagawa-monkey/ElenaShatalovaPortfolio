@@ -167,9 +167,9 @@
 
 <style>
   .mob-menu {
-    top: calc(50px + (120vh - 100%));
+    min-height: -webkit-fill-available
+    height: 100vh;
   }
-
   .hamburger {
     width: 24px;
     cursor: pointer;
