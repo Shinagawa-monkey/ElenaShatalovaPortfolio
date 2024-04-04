@@ -71,7 +71,7 @@
 
  
 <!-- <header class={"sticky z-[2] top-0 duration-200 px-4 flex items-center justify-between border-b border-solid " + (y > 0 ? " py-4 bg-slate-950 border-violet-950" : " py-6 bg-transparent border-transparent")}> -->
-  <header class={"fixed w-full z-[2] top-0 duration-200 px-4 flex items-center justify-between border-b border-solid " + (y > 0 && !isOpen ? " py-4 bg-slate-950 border-violet-950" : " py-6 bg-transparent border-transparent")}>
+  <header class={"sticky z-[2] top-0 duration-200 px-4 flex items-center justify-between border-b border-solid " + (y > 0 && !isOpen ? " py-4 bg-slate-950 border-violet-950" : " py-6 bg-transparent border-transparent")}>
 
   <div class="flex items-center justify-between w-full">
     <h1 bind:this={logo} class="font-medium z-[3]" id="logo" aria-label="Logo: Elena Shatalova">
@@ -126,7 +126,7 @@
   </div>
   <!-- Mobile Menu -->
   <!-- <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full m-h-screen opacity-90 bg-slate-950 md:hidden h-full"> -->
-    <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full m-h-screen opacity-90 bg-slate-950 md:hidden h-full">
+    <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full m-h-screen opacity-90 bg-slate-950 md:hidden h-screen">
     <ul class="flex-col items-center px-4 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-slate-400">
       {#if !$page.error && $page.url.pathname === '/'}
         {#each tabs as tab, index}
