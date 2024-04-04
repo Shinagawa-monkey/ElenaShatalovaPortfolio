@@ -167,7 +167,7 @@
 
 <style>
   .mob-menu {
-    min-height: -webkit-fill-available
+    min-height: -webkit-fill-available;
     height: 100vh;
   }
   .hamburger {
