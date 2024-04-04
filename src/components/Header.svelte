@@ -125,7 +125,7 @@
     </button>
   </div>
   <!-- Mobile Menu -->
-    <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full h-full m-h-screen opacity-90 bg-slate-950 md:hidden before:absolute before:h-1/4 before:w-screen before:inset-x-0 top-0 before:opacity-90 before:bg-slate-950 after:absolute after:h-1/4 after:w-screen afetr:inset-x-0 bottom-0 after:opacity-90 after:bg-slate-950">
+    <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full h-full m-h-screen opacity-90 bg-slate-950 md:hidden before:absolute before:h-32 before:w-screen before:inset-x-0 top-0 before:opacity-90 before:bg-slate-950 after:absolute after:h-32 after:w-screen afetr:inset-x-0 bottom-0 after:opacity-90 after:bg-slate-950">
     <ul class="flex-col items-center px-4 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-slate-400">
       {#if !$page.error && $page.url.pathname === '/'}
         {#each tabs as tab, index}
