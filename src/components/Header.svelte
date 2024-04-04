@@ -41,15 +41,23 @@
   };
 
   let btn, menu, logo;
+
+  function setFullViewportHeight() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
   
   onMount(() => {
     window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', setFullViewportHeight);
+    setFullViewportHeight();
     btn = document.getElementById('btn');
     menu = document.getElementById('menu');
     logo = document.getElementById('logo');
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', setFullViewportHeight);
     };
   });
 
@@ -167,8 +175,8 @@
 
 <style>
   #menu {
-    height: 100%;
-    height: -webkit-fill-available;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
   }
 
   .hamburger {
