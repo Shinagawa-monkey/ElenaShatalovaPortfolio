@@ -38,6 +38,7 @@
 
   const handleResize = () => {
     windowWidth.set(window.innerWidth);
+    setHeight();
   };
 
   let btn, menu, logo;
@@ -47,11 +48,19 @@
     btn = document.getElementById('btn');
     menu = document.getElementById('menu');
     logo = document.getElementById('logo');
-
+    setHeight(); // Set initial height
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   });
+
+  // Function to set the minimum height of an element based on window height
+  const setHeight = () => {
+    const element = document.getElementById("menu");
+    if (element) {
+      element.style.minHeight = window.innerHeight + "px";
+    }
+  };
 
   $: {
     const width = $windowWidth;
@@ -125,7 +134,7 @@
     </button>
   </div>
   <!-- Mobile Menu -->
-  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full m-h-screen opacity-90 bg-slate-950 md:hidden"> 
+  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full m-h-screen opacity-90 bg-slate-950 md:hidden">
     <!-- <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full h-full m-h-screen opacity-90 bg-slate-950 md:hidden"> -->
     <ul class="flex-col items-center px-4 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-slate-400">
       {#if !$page.error && $page.url.pathname === '/'}
