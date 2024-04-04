@@ -483,6 +483,7 @@
     background-color: #fff;
   }
       
+
   /* Media query for screens of 640 pixels and smaller */
   @media (max-width: 640px) {
     .hamburger {
