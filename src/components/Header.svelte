@@ -30,6 +30,7 @@
 // }
   
   let windowWidth = writable(typeof window !== 'undefined' ? window.innerWidth : 0);
+  let windowHeight = writable(typeof window !== 'undefined' ? window.innerHeight : 0);
 
   // Set initial values based on window width
   let isFlex = false;
@@ -38,29 +39,37 @@
 
   const handleResize = () => {
     windowWidth.set(window.innerWidth);
-    setHeight();
+    windowHeight.set(window.innerHeight);
+    setMenuHeight();
   };
 
   let btn, menu, logo;
+
+  // Function to set menu height to 100vh
+  const setMenuHeight = () => {
+    const vh = window.innerHeight * 0.01;
+    if (menu) {
+      menu.style.height = `${window.innerHeight}px`;
+    }
+  };
+
+  // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+ // let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+//document.documentElement.style.setProperty('--vh', `${vh}px`);
   
   onMount(() => {
     window.addEventListener('resize', handleResize);
     btn = document.getElementById('btn');
     menu = document.getElementById('menu');
     logo = document.getElementById('logo');
-    setHeight(); // Set initial height
+
+    setMenuHeight();
+
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   });
-
-  // Function to set the minimum height of an element based on window height
-  const setHeight = () => {
-    const element = document.getElementById("menu");
-    if (element) {
-      element.style.minHeight = window.innerHeight + "px";
-    }
-  };
 
   $: {
     const width = $windowWidth;
@@ -74,6 +83,8 @@
     isOpen = !isOpen;
     isFlex = !isFlex;
     isHidden = !isHidden;
+    // Update menu height when toggling
+    setMenuHeight();
     isMenuOpen.update(value => !value);
   };
 </script>
@@ -134,7 +145,7 @@
     </button>
   </div>
   <!-- Mobile Menu -->
-  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full m-h-screen opacity-90 bg-slate-950 md:hidden">
+  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full m-h-screen opacity-90 bg-slate-950 md:hidden h-svh">
     <!-- <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full h-full m-h-screen opacity-90 bg-slate-950 md:hidden"> -->
     <ul class="flex-col items-center px-4 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-slate-400">
       {#if !$page.error && $page.url.pathname === '/'}
@@ -175,6 +186,10 @@
 
 
 <style>
+  #menu {
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+  }
   .hamburger {
     width: 24px;
     cursor: pointer;
