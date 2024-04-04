@@ -2,12 +2,14 @@
   // https://scottspence.com/posts/contact-form-send-email-from-site
   // https://www.loganwilliams.tech/posts/first-post
 
+  // https://svelte.dev/examples/svg-transitions
+  // https://learn.svelte.dev/tutorial/dimensions
+
   //Vershion short code: 78.5 desktop 45.7 mobile
 
   import Step from "../components/Step.svelte"
   import { onMount, afterUpdate, onDestroy } from 'svelte';
   import { isMenuOpen } from '$lib/menuStore';
-  import Swiper from "swiper";
   // import { theme } from '$lib/theme';
   //import { page } from "$app/stores";
   import { enhance } from "$app/forms";
@@ -299,6 +301,17 @@
 </main>
 
 <!-- <style>
+  Mars: #D45500, #B87333
+
+  light theme:
+  bg-sky-200 - #B0E2FF;
+
+  Text Contrast Color:
+  text-navy-900 - dark blue (#002366) / text-navy-800 - navy blue (#001F4D)
+  Design Element Contrast Color:
+  text-royal-blue-500 - royal blue (#4169E1) / text-midnight-blue-800 - midnight blue (#191970)
+
+
   .scroll-reveal > :not(.exclude-from-styling),
   .scroll-reveal > .section-title > :not(.exclude-from-styling) {
     color: hsl(0 0% 100% / 0.2);
