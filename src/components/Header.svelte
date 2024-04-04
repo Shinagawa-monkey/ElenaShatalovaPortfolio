@@ -30,6 +30,7 @@
 // }
   
   let windowWidth = writable(typeof window !== 'undefined' ? window.innerWidth : 0);
+  let containerHeight = writable(typeof window !== 'undefined' ? window.innerHeight : 0);
 
   // Set initial values based on window width
   let isFlex = false;
@@ -38,31 +39,25 @@
 
   const handleResize = () => {
     windowWidth.set(window.innerWidth);
+    containerHeight.set(window.innerHeight);
   };
 
   let btn, menu, logo;
-
-  function setFullViewportHeight() {
-  const vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-  }
   
   onMount(() => {
     window.addEventListener('resize', handleResize);
-    window.addEventListener('resize', setFullViewportHeight);
-    setFullViewportHeight();
     btn = document.getElementById('btn');
     menu = document.getElementById('menu');
     logo = document.getElementById('logo');
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('resize', setFullViewportHeight);
     };
   });
 
   $: {
     const width = $windowWidth;
+    const height = $containerHeight;
     isFlex = width <= 768;
     isOpen = false;
     isFlex = false;
@@ -133,7 +128,7 @@
     </button>
   </div>
   <!-- Mobile Menu -->
-  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full m-h-screen opacity-90 bg-slate-950 md:hidden h-svh">
+  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full m-h-screen opacity-90 bg-slate-950 md:hidden h-[{containerHeight}px]">
     <!-- <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full h-full m-h-screen opacity-90 bg-slate-950 md:hidden"> -->
     <ul class="flex-col items-center px-4 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-slate-400">
       {#if !$page.error && $page.url.pathname === '/'}
@@ -174,11 +169,6 @@
 
 
 <style>
-  #menu {
-    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-    height: calc(var(--vh, 1vh) * 100);
-  }
-
   .hamburger {
     width: 24px;
     cursor: pointer;
