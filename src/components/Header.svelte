@@ -125,9 +125,9 @@
     </button>
   </div>
   <!-- Mobile Menu -->
-  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full opacity-90 bg-slate-950 md:hidden h-screen">
+  <div class:flex={!isHidden} class:hidden={!isFlex} class="bg-no-repeat bg-center w-screen	h-screen	fixed inset-0 z-[2] hidden self-end overflow-y-auto opacity-90 bg-slate-950 md:hidden"></div>
     <!-- <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full h-full m-h-screen opacity-90 bg-slate-950 md:hidden"> -->
-    <ul class="flex-col items-center px-4 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-slate-400">
+    <ul bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu"  class="absolute left-1/2 -translate-x-1/2 w-full	top-1/2 flex-col items-center px-4 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-slate-400">
       {#if !$page.error && $page.url.pathname === '/'}
         {#each tabs as tab, index}
           <li>
@@ -161,7 +161,7 @@
       </li>
     </div>
     </ul>
-  </div>
+  <!-- </div> -->
 </header>
 
 
