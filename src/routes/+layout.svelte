@@ -43,7 +43,7 @@
         <i class="fa-solid fa-arrow-up" />
     </button>
   </div>
-  <Header {y} {innerHeight} {theme}/>
+  <Header {y} {innerHeight} {theme} class="h-dvh" />
   <slot />
   <Footer />
 </div>
