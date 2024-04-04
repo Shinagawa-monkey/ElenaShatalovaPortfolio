@@ -30,6 +30,7 @@
 // }
   
   let windowWidth = writable(typeof window !== 'undefined' ? window.innerWidth : 0);
+  let menuHeight = writable(0);
 
   // Set initial values based on window width
   let isFlex = false;
@@ -38,15 +39,24 @@
 
   const handleResize = () => {
     windowWidth.set(window.innerWidth);
+    const menu = document.getElementById('menu');
+    if (menu) {
+      menuHeight.set(menu.offsetHeight);
+    }
   };
 
   let btn, menu, logo;
   
   onMount(() => {
-    window.addEventListener('resize', handleResize);
+    
     btn = document.getElementById('btn');
     menu = document.getElementById('menu');
     logo = document.getElementById('logo');
+
+    if (menu) {
+      menuHeight.set(menu.offsetHeight);
+    }
+    window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -59,6 +69,11 @@
     isOpen = false;
     isFlex = false;
     isHidden = false;
+
+    const windowHeight = window.innerHeight;
+    const menuOffset = isOpen ? menuHeight : 0;
+    document.body.style.setProperty('--menu-offset', `${menuOffset}px`);
+    document.body.style.setProperty('--window-height', `${windowHeight}px`);
   }
 
   function navToggle() {
@@ -71,7 +86,7 @@
 
  
 <!-- <header class={"sticky z-[2] top-0 duration-200 px-4 flex items-center justify-between border-b border-solid " + (y > 0 ? " py-4 bg-slate-950 border-violet-950" : " py-6 bg-transparent border-transparent")}> -->
-  <header class={"sticky z-[2] top-0 duration-200 px-4 flex items-center justify-between border-b border-solid " + (y > 0 && !isOpen ? " py-4 bg-slate-950 border-violet-950" : " py-6 bg-transparent border-transparent")}>
+  <header class={"sticky z-[2] top-0 duration-200 px-4 flex items-center justify-between border-b border-solid " + (y > 0 && !isOpen ? " py-4 bg-slate-950 border-violet-950" : " py-6 bg-transparent border-transparent")} style="--menu-offset: 0; --window-height: 100vh;">
 
   <div class="flex items-center justify-between w-full">
     <h1 bind:this={logo} class="font-medium z-[3]" id="logo" aria-label="Logo: Elena Shatalova">
@@ -125,7 +140,7 @@
     </button>
   </div>
   <!-- Mobile Menu -->
-  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full m-h-screen opacity-90 bg-slate-950 md:hidden h-svh">
+  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full opacity-90 bg-slate-950 md:hidden" style="height: calc(var(--window-height) - var(--menu-offset)); transition: height 0.2s ease;">
     <!-- <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full h-full m-h-screen opacity-90 bg-slate-950 md:hidden"> -->
     <ul class="flex-col items-center px-4 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-slate-400">
       {#if !$page.error && $page.url.pathname === '/'}
@@ -166,6 +181,11 @@
 
 
 <style>
+   #menu {
+    max-height: calc(var(--window-height) - var(--menu-offset));
+    overflow-y: auto;
+  }
+  
   .hamburger {
     width: 24px;
     cursor: pointer;
