@@ -127,7 +127,7 @@
   <!-- Mobile Menu -->
   <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full m-h-screen opacity-90 bg-slate-950 md:hidden h-svh">
     <!-- <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full h-full m-h-screen opacity-90 bg-slate-950 md:hidden"> -->
-    <ul class="flex-col items-center px-4 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-slate-400">
+    <ul class="content flex-col items-center px-4 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-slate-400">
       {#if !$page.error && $page.url.pathname === '/'}
         {#each tabs as tab, index}
           <li>
@@ -166,6 +166,23 @@
 
 
 <style>
+  .bg {
+  background: linear-gradient(335deg, rgba(255,140,107,1) 0%, rgba(255,228,168,1) 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
+}
+
+.content{
+  position: absolute;
+  margin-top: 5rem;
+  left: 50%; 
+  transform: translateX(-50%);
+  width: 80%;
+}
   .hamburger {
     width: 24px;
     cursor: pointer;
