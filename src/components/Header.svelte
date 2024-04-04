@@ -170,7 +170,7 @@
   background: linear-gradient(335deg, rgba(255,140,107,1) 0%, rgba(255,228,168,1) 100%);
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  height: 110vh;
   width: 100vw;
   position: fixed;
   z-index: -1;
