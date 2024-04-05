@@ -125,7 +125,7 @@
     </button>
   </div>
   <!-- Mobile Menu -->
-  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full m-h-screen opacity-90 bg-slate-950 md:hidden">
+  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full h-full m-h-screen opacity-90 bg-slate-950 md:hidden before:bg-blend-exclusion before:absolute before:h-10 before:w-screen before:inset-x-0 top-0 before:opacity-90 before:bg-slate-950 after:bg-blend-exclusion after:absolute after:h-screen after:w-screen afetr:inset-x-0 bottom-0 after:opacity-90 after:bg-slate-950">
     <!-- <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full h-full m-h-screen opacity-90 bg-slate-950 md:hidden"> -->
     <ul class="flex-col items-center px-4 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-slate-400">
       {#if !$page.error && $page.url.pathname === '/'}
@@ -166,10 +166,6 @@
 
 
 <style>
-  #menu {
-    height: calc(110% - 100px);
-  }
-
   .hamburger {
     width: 24px;
     cursor: pointer;
