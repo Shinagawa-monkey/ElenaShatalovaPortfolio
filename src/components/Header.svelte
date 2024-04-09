@@ -1,6 +1,6 @@
 <script>
   import { theme, toggleTheme } from '$lib/theme';
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
   import { writable } from 'svelte/store';
   import { isMenuOpen } from '$lib/menuStore';
   import { page } from '$app/stores';
@@ -14,11 +14,26 @@
   ];
 
   let error = $page.error;
+
+  // const setTheme = (theme) => {
+  //   document.documentElement.dataset.theme = theme;
+  //   document.cookie = `appTheme=${theme};max-age=31536000;path="/"`;
+  // }
   
-  // // Add a variable to hold the current theme
-  // let currentTheme;
-  // // Subscribe to the theme store
-  // theme.subscribe(value => currentTheme = value);
+  // Subscribe to the theme store
+  let currentTheme;
+  const unsubscribe = theme.subscribe(value => {
+    currentTheme = value;
+    if (typeof document !== 'undefined') {
+      document.documentElement.dataset.theme = value;
+      document.cookie = `appTheme=${value};max-age=31536000;path="/"`;
+    }
+  });
+
+  // Cleanup the subscription when the component is destroyed
+  onDestroy(() => {
+    unsubscribe();
+  });
 
 
 // Reactive declaration to update the button appearance based on the current theme
@@ -106,6 +121,12 @@
           {/if}
         </button>
       </li>
+      <!-- <li>
+        <a href={"#"} on:click={() => setTheme('light')}>Light</a>
+      </li>
+      <li>
+        <a href={"#"} on:click={() => setTheme('dark')}>Dark</a>
+      </li> -->
       </ul>
     </div>
     <!-- Hamburger Button - class={`z-30 block md:hidden hamburger focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50 ${isOpen && y > 0 ? 'open-sticky' : ''}`} -->

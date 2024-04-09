@@ -15,6 +15,18 @@ html {
   scroll-snap-stop: always;
 } */
 
+/* css vars */
+:root {
+  --background-color: rgb(148 163 184);
+  --text: #000;
+  /* --sun: '' */
+}
+
+[data-theme="dark"] {
+  --background-color: rgb(3 7 18);
+  --text: #fff;
+}
+
 * {
   font-family: "Roboto", sans-serif;
   font-display: optional;
@@ -23,6 +35,8 @@ html {
 body {
   min-height: 100vh;
   min-height: 100svh;
+  background-color: var(--background-color);
+  color: var(--text);
 }
 
 img {

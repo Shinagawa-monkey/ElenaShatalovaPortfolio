@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -31,9 +31,13 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> -->
     %sveltekit.head%
   </head>
-  <body
+  <!-- <body
     data-sveltekit-preload-data="hover"
     class="bg-slate-950 text-white relative"
+  > -->
+  <body
+    data-sveltekit-preload-data="hover"
+    class="relative"
   >
     <div style="display: contents" class="relative z-[1]">%sveltekit.body%</div>
     <div class="absolute min-h-screen top-0 left-0 w-full z-[-1] opacity-70">

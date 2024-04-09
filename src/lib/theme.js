@@ -1,3 +1,74 @@
+import { writable } from 'svelte/store';
+import { browser } from '$app/environment';
+
+// Check if running in the browser environment
+const isBrowser = browser;
+
+// Function to get the user's preferred theme from localStorage or the system settings
+function getUserPreferredTheme() {
+  if (isBrowser) {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme !== null) {
+      return storedTheme;
+    }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  return 'light';
+}
+
+// Initialize the theme with the user's preferred theme
+export const theme = writable(getUserPreferredTheme());
+
+export const toggleTheme = () => {
+  theme.update(currentTheme => {
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    // Update localStorage if available
+    if (isBrowser) {
+      localStorage.setItem('theme', newTheme);
+    }
+    return newTheme;
+  });
+};
+
+
+
+// import { writable } from "svelte/store";
+// import { browser } from "$app/environment";
+
+// // Check if running in the browser environment
+// const isBrowser = browser;
+
+// // Function to get the user's preferred theme from localStorage or the system settings
+// function getUserPreferredTheme() {
+//   if (isBrowser) {
+//     const storedTheme = localStorage.getItem("theme");
+//     if (storedTheme !== null) {
+//       return storedTheme;
+//     }
+//     return window.matchMedia("(prefers-color-scheme: dark)").matches
+//       ? "dark"
+//       : "light";
+//   }
+//   return "light";
+// }
+
+// // Initialize the theme with the user's preferred theme
+// export const theme = writable(getUserPreferredTheme());
+
+// export const toggleTheme = () => {
+//   theme.update((currentTheme) => {
+//     const newTheme = currentTheme === "light" ? "dark" : "light";
+//     // Update localStorage if available
+//     if (isBrowser) {
+//       localStorage.setItem("theme", newTheme);
+//     }
+//     return newTheme;
+//   });
+// };
+
+
+
+
 // import { writable } from "svelte/store";
 // import { browser } from "$app/environment";
 
@@ -34,39 +105,6 @@
 //   });
 // };
 
-import { writable } from "svelte/store";
-import { browser } from "$app/environment";
-
-// Check if running in the browser environment
-const isBrowser = browser;
-
-// Function to get the user's preferred theme from localStorage or the system settings
-function getUserPreferredTheme() {
-  if (isBrowser) {
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme !== null) {
-      return storedTheme;
-    }
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-  }
-  return "light";
-}
-
-// Initialize the theme with the user's preferred theme
-export const theme = writable(getUserPreferredTheme());
-
-export const toggleTheme = () => {
-  theme.update((currentTheme) => {
-    const newTheme = currentTheme === "light" ? "dark" : "light";
-    // Update localStorage if available
-    if (isBrowser) {
-      localStorage.setItem("theme", newTheme);
-    }
-    return newTheme;
-  });
-};
 
 // import { writable } from "svelte/store";
 // import { browser } from "$app/environment";
