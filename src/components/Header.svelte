@@ -21,13 +21,22 @@
   // }
   
   // Subscribe to the theme store
-  let currentTheme;
+  // let currentTheme;
+  // const unsubscribe = theme.subscribe(value => {
+  //   currentTheme = value;
+  //   if (typeof document !== 'undefined') {
+  //     document.documentElement.dataset.theme = value;
+  //     document.cookie = `appTheme=${value};max-age=31536000;path="/"`;
+  //   }
+  // });
+
+  let currentTheme = null;
   const unsubscribe = theme.subscribe(value => {
-    currentTheme = value;
-    if (typeof document !== 'undefined') {
+    if (typeof window !== 'undefined') {
       document.documentElement.dataset.theme = value;
-      document.cookie = `appTheme=${value};max-age=31536000;path="/"`;
+      document.cookie = `appTheme=${value};max-age=31536000;path=/`;
     }
+    currentTheme = value;
   });
 
   // Cleanup the subscription when the component is destroyed
@@ -117,7 +126,7 @@
           {#if $theme === 'light'}
             <img class="w-5 h-5 transition duration-300 ease-in-out" src="/images/moon-to-sun.svg" alt="Light Theme">
           {:else}
-            <img class="w-5 h-5 transition duration-300 ease-in-out" src={"/images/sun-to-moon.svg"} alt="Dark Theme">
+            <img class="w-5 h-5 transition duration-300 ease-in-out" src="/images/sun-to-moon.svg" alt="Dark Theme">
           {/if}
         </button>
       </li>
@@ -175,7 +184,7 @@
           {#if $theme === 'light'}
             <img class="w-5 h-5 transition duration-300 ease-in-out" src="/images/moon-to-sun.svg" alt="Light Theme">
           {:else}
-            <img class="w-5 h-5 transition duration-300 ease-in-out" src={"/images/sun-to-moon.svg"} alt="Dark Theme">
+            <img class="w-5 h-5 transition duration-300 ease-in-out" src="/images/sun-to-moon.svg" alt="Dark Theme">
           {/if}
           <!-- {/if} -->
         </button>

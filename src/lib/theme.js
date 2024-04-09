@@ -4,20 +4,28 @@ import { browser } from '$app/environment';
 // Check if running in the browser environment
 const isBrowser = browser;
 
+// function getStoredTheme() {
+//   if (isBrowser) {
+//     const storedTheme = localStorage.getItem('theme');
+//     if (storedTheme !== null) {
+//       return storedTheme;
+//     }
+//     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+//   }
+//   return 'light';
+// }
+
 // Function to get the user's preferred theme from localStorage or the system settings
-function getUserPreferredTheme() {
+function getStoredTheme() {
   if (isBrowser) {
     const storedTheme = localStorage.getItem('theme');
-    if (storedTheme !== null) {
-      return storedTheme;
-    }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return storedTheme !== null ? storedTheme : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   }
-  return 'light';
+  return 'light'; // Default to light theme if not in browser
 }
 
 // Initialize the theme with the user's preferred theme
-export const theme = writable(getUserPreferredTheme());
+export const theme = writable(getStoredTheme());
 
 export const toggleTheme = () => {
   theme.update(currentTheme => {
