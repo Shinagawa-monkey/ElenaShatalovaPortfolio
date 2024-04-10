@@ -20,8 +20,8 @@
   <img src={"/images/notFoundDark.png"} alt="Page Not Found" class="max-w-md w-full mb-4" loading="lazy" />
 
   <!-- Error Message -->
-  <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-center text-balance poppins text-violet-400 my-4">Oops! Page not found.</h1>
-  <p class="text-base sm:text-lg md:text-xl text-center text-pretty poppins text-slate-300 mb-6">
+  <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-center text-balance poppins text-indigo-500 dark:text-violet-400 my-4">Oops! Page not found.</h1>
+  <p class="text-base sm:text-lg md:text-xl text-center text-pretty poppins text-gray-700 dark:text-slate-300 mb-6">
       We're sorry, but the page you are looking for does not exist.
   </p>
 

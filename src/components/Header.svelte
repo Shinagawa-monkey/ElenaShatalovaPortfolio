@@ -95,7 +95,7 @@
 
  
 <!-- <header class={"sticky z-[2] top-0 duration-200 px-4 flex items-center justify-between border-b border-solid " + (y > 0 ? " py-4 bg-slate-950 border-violet-950" : " py-6 bg-transparent border-transparent")}> -->
-  <header class={"sticky z-[2] top-0 duration-200 px-4 flex items-center justify-between border-b border-solid " + (y > 0 && !isOpen ? " py-4 bg-slate-950 border-violet-950" : " py-6 bg-transparent border-transparent")}>
+  <header class={"sticky z-[2] top-0 duration-200 px-4 flex items-center justify-between border-b border-solid " + (y > 0 && !isOpen ? " py-4 bg-blue-200 dark:bg-slate-950 border-blue-300 dark:border-violet-950" : " py-6 bg-transparent border-transparent")}>
 
   <div class="flex items-center justify-between w-full">
     <h1 bind:this={logo} class="font-medium z-[3]" id="logo" aria-label="Logo: Elena Shatalova">
@@ -107,7 +107,7 @@
         {#if !$page.error && $page.url.pathname === '/'}
           {#each tabs as tab, index}
             <li>
-              <a href={tab.link} class="tracking-widest duration-200 hover:text-violet-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" target={index === 3 ? "_blank" : ""} >
+              <a href={tab.link} class="tracking-widest duration-200 hover:text-indigo-500 dark:hover:text-violet-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" target={index === 3 ? "_blank" : ""} >
                 <span>{tab.name}</span>
               </a>
             </li>

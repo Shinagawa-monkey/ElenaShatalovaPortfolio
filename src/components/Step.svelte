@@ -38,7 +38,7 @@
 </script>
 
 <div style="height: {height}" class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-violet-700 text-center cursor-default group hover:border-violet-400 duration-200 transition-height">
-  <div class="bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200">
+  <div class="bg-blue-200 dark:bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200">
     <i class={step.icon} />
   </div>
   <h4 class="font-medium text-xl sm:text-2xl md:text-3xl text-balance">{step.name}</h4>
