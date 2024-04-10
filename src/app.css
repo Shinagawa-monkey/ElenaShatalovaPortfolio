@@ -17,8 +17,8 @@ html {
 
 /* css vars */
 :root {
-  --background-color: rgb(148 163 184);
-  --text: #000;
+  --background-color: rgb(186 230 253);
+  --text: rgb(17 24 39);
   /* --sun: '' */
 }
 
