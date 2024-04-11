@@ -123,7 +123,7 @@
       </ul>
     </nav>
   </div>
-  <p class="text-sm md:text-base mt-2 opacity-50 flex items-center poppins whitespace-nowrap flex-wrap justify-center">
+  <p class="text-sm md:text-base mt-2 opacity-50 flex items-center poppins whitespace-nowrap flex-wrap justify-center text-white">
    Crafted with <img class="ml-1 mr-1 w-6 h-6" src="/images/heartLight.svg" alt="Heart Icon" /> <span class="flex items-center">by Elena Shatalova &copy; {new Date().getFullYear()}</span>.
   </p>
 </footer>
