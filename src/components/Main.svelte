@@ -240,13 +240,13 @@
         <li class="mb-10 ml-4 last:mb-0">
           <figure class="absolute -left-9  stroke-gray-800 dark:stroke-slate-700 -mt-1 sm:mt-0 md:mt-1">
             <svg class="-rotate-90" width="75" height="75" viewBox="0 0 100 100">
-              <circle cx="75" cy="50" r="20" class="stroke-indigo-600 dark:stroke-violet-700 stroke-1 fill-none" />
+              <circle cx="75" cy="50" r="20" class="stroke-indigo-500 dark:stroke-violet-700 stroke-1 fill-none" />
               <circle cx="75" cy="50" r="20" class="stroke-[5px] fill-gray-200 dark:fill-slate-50" />
-              <circle cx="75" cy="50" r="10" class="stroke-1 fill-indigo-600 dark:fill-violet-700" />
+              <circle cx="75" cy="50" r="10" class="stroke-1 fill-indigo-500 dark:fill-violet-700" />
             </svg>
           </figure>
           <div class="flex flex-wrap gap-4 flex-row items-center justify-start text-xs md:text-sm section-title">
-            <span class="inline-block px-3 py-1 font-semibold poppins text-gray-900 dark:text-white bg-indigo-600 dark:bg-violet-700 rounded-full shadow-md text-sm sm:text-base">
+            <span class="inline-block px-3 py-1 font-semibold poppins text-gray-900 dark:text-white bg-indigo-500 dark:bg-violet-700 rounded-full shadow-md text-sm sm:text-base">
              {benefit.year}
             </span>
             <h4 class="text-2xl sm:text-3xl md:text-5xl font-semibold poppins text-gray-900 dark:text-white">
