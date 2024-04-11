@@ -269,27 +269,27 @@
 <section id="contact" class="py-20 lg:py-24 flex flex-col gap-10 sm:gap-12 md:gap-14">
   <div class="flex flex-col gap-2 items-center justify-center text-center">
     <h2 class="text-large sm:text-xl md:text-2xl text-balance">Get in Touch</h2>
-    <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">Let's <span class="poppins text-indigo-500 dark:text-violet-400">Connect</span></h3>
+    <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">Let's <span class="poppins text-indigo-600 dark:text-violet-400">Connect</span></h3>
   </div>
 
   <div class="flex justify-center">
     <form method="POST" class="flex flex-col w-full md:w-[800px]" use:enhance on:submit={handleSubmit}>
-      <p class="text-sm poppins font-normal leading-none text-gray-600 dark:text-slate-400 mb-2">* indicates required field</p>
+      <p class="text-sm poppins font-normal leading-none text-gray-700 dark:text-slate-400 mb-2">* indicates required field</p>
   
       <label for="name" class="sr-only">Name *</label>
-      <input type="text" id="name" name="name" value={form?.contact?.name?.value ?? ''} placeholder="Name *" aria-label="Name" class="poppins p-2 bg-transparent border border-solid border-indigo-500 dark:border-violet-700 rounded-lg group hover:border-violet-400 duration-200 transition-height focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} required />
+      <input type="text" id="name" name="name" value={form?.contact?.name?.value ?? ''} placeholder="Name *" aria-label="Name" class="poppins p-2 bg-transparent border border-solid border-indigo-600 dark:border-violet-700 rounded-lg group hover:border-indigo-700 dark:hover:border-violet-400 duration-200 transition-height focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} required />
       <p class="error text-xs mt-1 min-h-5 text-red-400">{form?.nameError ?? ''}</p>
   
       <label for="email" class="sr-only">Email *</label>
-      <input type="email" id="email" name="email" value={form?.contact?.email?.value ?? ''} placeholder="Email *" aria-label="Email" class="poppins p-2 bg-transparent border border-solid border-indigo-500 dark:border-violet-700 rounded-lg group hover:border-violet-400 duration-200 transition-height focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} required />
+      <input type="email" id="email" name="email" value={form?.contact?.email?.value ?? ''} placeholder="Email *" aria-label="Email" class="poppins p-2 bg-transparent border border-solid border-indigo-600 dark:border-violet-700 rounded-lg group hover:border-indigo-700 dark:hover:border-violet-400 duration-200 transition-height focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} required />
       <p class="error text-xs mt-1 min-h-5 text-red-400">{form?.emailError ?? ''}</p>
   
       <label for="message" class="sr-only">Message</label>
-      <textarea id="message" name="message" value={form?.contact?.message?.value ?? ''} placeholder="Message" aria-label="Message" rows="6" class="poppins mb-5 p-2 bg-transparent border border-solid border-indigo-500 dark:border-violet-700 rounded-lg group hover:border-violet-400 duration-200 transition-height focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0}></textarea>
+      <textarea id="message" name="message" value={form?.contact?.message?.value ?? ''} placeholder="Message" aria-label="Message" rows="6" class="poppins mb-5 p-2 bg-transparent border border-solid border-indigo-600 dark:border-violet-700 rounded-lg group hover:border-indigo-700 dark:hover:border-violet-400 duration-200 transition-height focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0}></textarea>
   
       <div class="flex justify-start">
-        <button type="submit" aria-label="Work With Me" class:submitted class:loading class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-gray-100 text-slate-950 cursor-pointer hover:bg-gray-200 duration-200 group/ContactBtn whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} disabled={loading}>
-            <div class="absolute top-0 right-full w-full h-full bg-violet-800 opacity-20 group-hover/ContactBtn:translate-x-full z-[0] duration-200"></div>
+        <button type="submit" aria-label="Work With Me" class:submitted class:loading class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-blue-300 dark:bg-gray-100 text-gray-900 dark:text-slate-950 cursor-pointer hover:bg-blue-400 dark:hover:bg-gray-200 duration-200 group/ContactBtn whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} disabled={loading}>
+            <div class="absolute top-0 right-full w-full h-full bg-indigo-500 dark:bg-violet-800 opacity-20 group-hover/ContactBtn:translate-x-full z-[0] duration-200"></div>
             <h4 class="relative z-[1]">{submitted ? successMessage : loading ? 'Sending message' : 'Work With Me'}</h4>
         </button>
       </div>
