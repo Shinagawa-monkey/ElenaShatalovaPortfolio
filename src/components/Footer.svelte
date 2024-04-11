@@ -71,12 +71,12 @@
   import { isMenuOpen } from '$lib/menuStore';
 </script>
 
-<footer class="py-5 sm:py-10 bg-black border-t border-solid border-violet-950 flex flex-col gap-2 sm:gap-4 justify-center items-center">
+<footer class="py-5 sm:py-10 bg-blue-500 dark:bg-black border-t border-solid border-indigo-900 dark:border-violet-950 flex flex-col gap-2 sm:gap-4 justify-center items-center">
   <div class="container max-w-screen-lg mx-auto flex flex-wrap justify-center">
     <nav>
       <ul class="flex gap-2 md:gap-4">
         <li>
-          <a href="https://github.com/Shinagawa-monkey" target="_blank" rel="noopener noreferrer" class="flex rounded-full overflow-hidden bg-white hover:bg-slate-400 p-2 transition-transform duration-300 ease-in-out transform hover:translate-y-[-2px] focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50" aria-label="GitHub" tabindex={$isMenuOpen ? -1 : 0}>
+          <a href="https://github.com/Shinagawa-monkey" target="_blank" rel="noopener noreferrer" class="flex rounded-full overflow-hidden bg-white hover:bg-slate-400 p-2 transition-transform duration-300 ease-in-out transform hover:translate-y-[-2px] focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" aria-label="GitHub" tabindex={$isMenuOpen ? -1 : 0}>
             <!-- Add accessible name for GitHub -->
             <span class="sr-only">GitHub</span>
             <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"  alt="GitHub Icon">
@@ -94,7 +94,7 @@
           </a>
         </li> -->
         <li>
-          <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" rel="noopener noreferrer" class="flex rounded-full overflow-hidden bg-white hover:bg-slate-400 p-2 transition-transform duration-300 ease-in-out transform hover:translate-y-[-2px] focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50" aria-label="LinkedIn" tabindex={$isMenuOpen ? -1 : 0}>
+          <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" rel="noopener noreferrer" class="flex rounded-full overflow-hidden bg-white hover:bg-slate-400 p-2 transition-transform duration-300 ease-in-out transform hover:translate-y-[-2px] focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" aria-label="LinkedIn" tabindex={$isMenuOpen ? -1 : 0}>
             <!-- Add accessible name for LinkedIn -->
             <span class="sr-only">LinkedIn</span>
             <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"  alt="LinkedIn Icon">
@@ -103,7 +103,7 @@
           </a>
         </li>
         <li>
-          <a href="https://discord.com/users/shinagawaMonkey#9910" target="_blank" rel="noopener noreferrer" class="flex rounded-full overflow-hidden bg-white hover:bg-slate-400 p-2 transition-transform duration-300 ease-in-out transform hover:translate-y-[-2px] focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50" aria-label="Discord" tabindex={$isMenuOpen ? -1 : 0}>
+          <a href="https://discord.com/users/shinagawaMonkey#9910" target="_blank" rel="noopener noreferrer" class="flex rounded-full overflow-hidden bg-white hover:bg-slate-400 p-2 transition-transform duration-300 ease-in-out transform hover:translate-y-[-2px] focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" aria-label="Discord" tabindex={$isMenuOpen ? -1 : 0}>
             <!-- Add accessible name for Discord -->
             <span class="sr-only">Discord</span>
             <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" alt="Discord Icon">
@@ -112,7 +112,7 @@
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/sudoCyberMonkey" target="_blank" rel="noopener noreferrer" class="flex rounded-full overflow-hidden bg-white hover:bg-slate-400 p-2 transition-transform duration-300 ease-in-out transform hover:translate-y-[-2px] focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50" aria-label="Twitter" tabindex={$isMenuOpen ? -1 : 0}>
+          <a href="https://twitter.com/sudoCyberMonkey" target="_blank" rel="noopener noreferrer" class="flex rounded-full overflow-hidden bg-white hover:bg-slate-400 p-2 transition-transform duration-300 ease-in-out transform hover:translate-y-[-2px] focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" aria-label="Twitter" tabindex={$isMenuOpen ? -1 : 0}>
             <!-- Add accessible name for Twitter -->
             <span class="sr-only">Twitter</span>
             <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" alt="Twitter Icon">

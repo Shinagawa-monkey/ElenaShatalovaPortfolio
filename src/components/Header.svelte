@@ -95,7 +95,7 @@
 
  
 <!-- <header class={"sticky z-[2] top-0 duration-200 px-4 flex items-center justify-between border-b border-solid " + (y > 0 ? " py-4 bg-slate-950 border-violet-950" : " py-6 bg-transparent border-transparent")}> -->
-  <header class={"sticky z-[2] top-0 duration-200 px-4 flex items-center justify-between border-b border-solid " + (y > 0 && !isOpen ? " py-4 bg-blue-200 dark:bg-slate-950 border-indigo-800 dark:border-violet-950" : " py-6 bg-transparent border-transparent")}>
+  <header class={"sticky z-[2] top-0 duration-200 px-4 flex items-center justify-between border-b border-solid " + (y > 0 && !isOpen ? " py-4 bg-blue-200 dark:bg-slate-950 border-indigo-900 dark:border-violet-950" : " py-6 bg-transparent border-transparent")}>
 
   <div class="flex items-center justify-between w-full">
     <h1 bind:this={logo} class="font-medium z-[3]" id="logo" aria-label="Logo: Elena Shatalova">
@@ -107,7 +107,7 @@
         {#if !$page.error && $page.url.pathname === '/'}
           {#each tabs as tab, index}
             <li>
-              <a href={tab.link} class="tracking-widest duration-200 hover:text-indigo-500 dark:hover:text-violet-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" target={index === 3 ? "_blank" : ""} >
+              <a href={tab.link} class="tracking-widest duration-200 hover:text-indigo-600 dark:hover:text-violet-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" target={index === 3 ? "_blank" : ""} >
                 <span>{tab.name}</span>
               </a>
             </li>
@@ -115,14 +115,14 @@
         {/if}
       
       <li class="flex items-center justify-center">
-        <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank"  class="font-medium blueShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-slate-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap">
-          <div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
+        <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank"  class="font-medium blueShadowLight dark:blueShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-indigo-600 dark:text-slate-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap">
+          <div class="absolute top-0 right-full w-full h-full bg-indigo-600 dak:bg-violet-400 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
           <span class="relative z-[1]">Get in touch</span>
         </a>
       </li>
       
       <li>
-        <button on:click={toggleTheme} class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-slate-200 transition duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50" aria-label={$theme === 'light' ? 'Switch to Dark Theme' : 'Switch to Light Theme'}>
+        <button on:click={toggleTheme} class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-slate-200 transition duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" aria-label={$theme === 'light' ? 'Switch to Dark Theme' : 'Switch to Light Theme'}>
           {#if $theme === 'light'}
             <img class="w-5 h-5 transition duration-300 ease-in-out" src="/images/moon-to-sun.svg" alt="Light Theme">
           {:else}
@@ -144,25 +144,25 @@
       on:click={navToggle} 
       class:open={isOpen}
       id="btn"
-      class={`z-[3] block md:hidden hamburger focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50 ${isOpen && y > 0 ? 'top-6' : ''}`}
+      class={`z-[3] block md:hidden hamburger focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 ${isOpen && y > 0 ? 'top-6' : ''}`}
       aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
       aria-expanded={isOpen ? 'true' : 'false'}
       aria-controls="menu"      
       >
-      <span class="hamburger-top"></span>
-      <span class="hamburger-middle"></span>
-      <span class="hamburger-bottom"></span>
+      <span class="hamburger-top bg-gray-900 dark:bg-white"></span>
+      <span class="hamburger-middle bg-gray-900 dark:bg-white"></span>
+      <span class="hamburger-bottom bg-gray-900 dark:bg-white"></span>
     </button>
   </div>
   <!-- Mobile Menu -->
-  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-svh h-full m-h-screen opacity-90 bg-slate-950 md:hidden before:opacity-100 before:absolute before:h-10 before:w-screen before:inset-x-0 top-0 before:bg-slate-950 after:opacity-100 after:absolute after:h-screen after:w-screen afetr:inset-x-0 bottom-0 after:bg-slate-950">
+  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-svh h-full m-h-screen opacity-90 bg-blue-200 dark:bg-slate-950 md:hidden before:opacity-100 before:absolute before:h-10 before:w-screen before:inset-x-0 top-0 before:bg-blue-200  dark:before:bg-slate-950 after:opacity-100 after:absolute after:h-screen after:w-screen afetr:inset-x-0 bottom-0 after:bg-blue-200 dark:after:bg-slate-950">
     <!-- <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full h-full m-h-screen opacity-90 bg-slate-950 md:hidden"> -->
-    <ul class="flex-col items-center px-4 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-slate-400">
+    <ul class="flex-col items-center px-4 py-1 pt-24 pb-4 tracking-widest text-gray-900 dark:text-white uppercase divide-y divide-slate-400">
       {#if !$page.error && $page.url.pathname === '/'}
         {#each tabs as tab, index}
           <li>
             <div class="w-full py-3 text-center">
-              <a href={tab.link} class="block duration-200 hover:text-violet-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" target={index === 3 ? "_blank" : ""}>
+              <a href={tab.link} class="block duration-200  hover:text-indigo-600 dark:hover:text-violet-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" target={index === 3 ? "_blank" : ""}>
                 <span>{tab.name}</span>
               </a>
             </div>
@@ -172,14 +172,14 @@
    
     <div class="flex items-center justify-center w-full px-5 py-3 gap-4">
       <li>
-        <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" class="font-medium block blueShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-slate-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap">
-          <div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
+        <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" class="font-medium block blueShadowLight dark:blueShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-indigo-600 dark:text-slate-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap">
+          <div class="absolute top-0 right-full w-full h-full bg-indigo-600 dak:bg-violet-400 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
             <h4 class="relative z-[1]">Get in touch</h4>
         </a>
       </li>
       
       <li>
-        <button on:click={toggleTheme} class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-slate-200 transition duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50">
+        <button on:click={toggleTheme} class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-slate-200 transition duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50">
           <!-- {#if themeLoaded} -->
           {#if $theme === 'light'}
             <img class="w-5 h-5 transition duration-300 ease-in-out" src="/images/moon-to-sun.svg" alt="Light Theme">
@@ -213,7 +213,7 @@
     height: 3px;
     top: 3px;
     left: 0;
-    background: #fff;
+    /* background: #fff; */
     transform: rotate(0);
     transition: all 0.5s;
   }
@@ -224,7 +224,7 @@
       
   .hamburger-bottom {
     transform: translateY(14px);
-    background: #fff;
+    /* background: #fff; */
   }
       
   .open {
@@ -237,7 +237,7 @@
       
   .open .hamburger-top {
     transform: rotate(45deg) translateY(6px) translateX(6px);
-    background-color: #fff;
+    /* background-color: #fff; */
   }
       
   .open .hamburger-middle {
@@ -246,7 +246,7 @@
       
   .open .hamburger-bottom {
     transform: rotate(-45deg) translateY(6px) translateX(-6px);
-    background-color: #fff;
+    /* background-color: #fff; */
   }
       
   /* .open-sticky {

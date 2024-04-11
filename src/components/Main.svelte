@@ -145,23 +145,23 @@
       <span class="text-4xl sm:text-5xl md:text-6xl">Hi! I'm </span>
       <span class="poppins text-indigo-600 dark:text-violet-400 text-4xl sm:text-5xl md:text-6xl">Elena</span> <span class="text-4xl sm:text-5xl md:text-6xl">Shatalova</span><br />
       Software <span class="poppins text-indigo-600 dark:text-violet-400">Engineer</span> &amp; <br />
-      Full Stack <span class="poppins text-indigo-500 dark:text-violet-400">Developer</span>
+      Full Stack <span class="poppins text-indigo-600 dark:text-violet-400">Developer</span>
     </h1>
   
     <p class="text-base sm:text-lg md:text-xl text-pretty">I specialize in 
-      <span class="text-indigo-500 dark:text-violet-400">JavaScript</span> 
-      (<span class="text-indigo-500 dark:text-violet-400">React</span>, <span class="text-indigo-500 dark:text-violet-400">Next.js</span>, or <span class="text-indigo-500 dark:text-violet-400">SvelteKit</span>), 
-      <span class="text-indigo-500 dark:text-violet-400">Tailwind CSS</span>,  
-      <span class="text-indigo-500 dark:text-violet-400">Bootstrap</span>, and the powerful combo of 
-      <span class="text-indigo-500 dark:text-violet-400">Node.js + Express.js</span>.<br />
-      Database challenges? Consider them solved—be it <span class="text-indigo-500 dark:text-violet-400">MongoDB</span>, 
-      <span class="text-indigo-500 dark:text-violet-400">PostgreSQL</span>, 
-      <span class="text-indigo-500 dark:text-violet-400">Firebase</span>, or 
-      <span class="text-indigo-500 dark:text-violet-400">Firestore</span>. Let's turn ideas into innovation!
+      <span class="text-indigo-600 dark:text-violet-400">JavaScript</span> 
+      (<span class="text-indigo-600 dark:text-violet-400">React</span>, <span class="text-indigo-600 dark:text-violet-400">Next.js</span>, or <span class="text-indigo-600 dark:text-violet-400">SvelteKit</span>), 
+      <span class="text-indigo-600 dark:text-violet-400">Tailwind CSS</span>,  
+      <span class="text-indigo-600 dark:text-violet-400">Bootstrap</span>, and the powerful combo of 
+      <span class="text-indigo-600 dark:text-violet-400">Node.js + Express.js</span>.<br />
+      Database challenges? Consider them solved—be it <span class="text-indigo-600 dark:text-violet-400">MongoDB</span>, 
+      <span class="text-indigo-600 dark:text-violet-400">PostgreSQL</span>, 
+      <span class="text-indigo-600 dark:text-violet-400">Firebase</span>, or 
+      <span class="text-indigo-600 dark:text-violet-400">Firestore</span>. Let's turn ideas into innovation!
     </p>
 
-    <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" class="font-medium blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" tabindex={$isMenuOpen ? -1 : 0} aria-label="LinkedIn Profile">
-      <div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
+    <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" class="font-medium blueShadowLight dark:blueShadow  mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-indigo-600 dark:text-slate-950 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" tabindex={$isMenuOpen ? -1 : 0} aria-label="LinkedIn Profile">
+      <div class="absolute top-0 right-full w-full h-full bg-indigo-600 dak:bg-violet-400 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
         <span class="relative z-[1]">Get in touch &rarr;</span>
     </a>
   </div>
@@ -175,19 +175,19 @@
   <section id="projects" class="pt-20 lg:pt-24 flex flex-col gap-10 sm:gap-12 md:gap-14">
     <div class="flex flex-col gap-2 items-center justify-center text-center">
       <h2 class="text-large sm:text-xl md:text-2xl text-balance">A few of my creative endeavors.</h2>
-      <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">Curious to <span class="poppins text-indigo-500 dark:text-violet-400">see</span> my work?</h3>
+      <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">Curious to <span class="poppins text-indigo-600 dark:text-violet-400">see</span> my work?</h3>
      </div>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
       <Step step={steps[0]} images={{dark: projectImagesDark[0], light: projectImagesLight[0]}}>
-        <p class="text-sm sm:text-base md:text-lg text-pretty">Tasty Treats is a refined <strong class="text-indigo-500 dark:text-violet-400">content management system app</strong> designed for easy recipe exploration. Easily discover, favorite, search, and comment on recipes with this user-friendly app. 
+        <p class="text-sm sm:text-base md:text-lg text-pretty">Tasty Treats is a refined <strong class="text-indigo-600 dark:text-violet-400">content management system app</strong> designed for easy recipe exploration. Easily discover, favorite, search, and comment on recipes with this user-friendly app. 
         </p>
       </Step>
       <Step step={steps[1]} images={{dark: projectImagesDark[1], light: projectImagesLight[1]}}>
-        <p class="text-sm sm:text-base md:text-lg text-pretty">ProjectHub is a robust <strong class="text-indigo-500 dark:text-violet-400">project management app</strong>. Seamlessly add, assign, track, and comment on projects with precision. Effortlessly explore projects by category and owner.
+        <p class="text-sm sm:text-base md:text-lg text-pretty">ProjectHub is a robust <strong class="text-indigo-600 dark:text-violet-400">project management app</strong>. Seamlessly add, assign, track, and comment on projects with precision. Effortlessly explore projects by category and owner.
         </p>
       </Step>
       <Step step={steps[2]} images={{dark: projectImagesDark[2], light: projectImagesLight[2]}}>
-        <p class="text-sm sm:text-base md:text-lg text-pretty">My Wallet is an elegant <strong class="text-indigo-500 dark:text-violet-400">financial transaction management app</strong> that helps you manage your financial transactions in a simple and efficient way. Track, edit, and delete entries with ease.
+        <p class="text-sm sm:text-base md:text-lg text-pretty">My Wallet is an elegant <strong class="text-indigo-600 dark:text-violet-400">financial transaction management app</strong> that helps you manage your financial transactions in a simple and efficient way. Track, edit, and delete entries with ease.
         </p>
       </Step>
     </div>
@@ -229,7 +229,7 @@
 <section id="about" class="pt-20 lg:pt-24 flex flex-col gap-10 sm:gap-12 md:gap-14 relative">
   <div class="flex flex-col gap-2 items-center justify-center text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-indigo-500 dark:before:bg-violet-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-indigo-500 dark:after:bg-violet-700 py-4">
     <h2 class="text-large sm:text-xl md:text-2xl text-balance">Want to know more?</h2>
-    <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">A bit <span class="poppins text-indigo-500 dark:text-violet-400">about</span> me.</h3>
+    <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">A bit <span class="poppins text-indigo-600 dark:text-violet-400">about</span> me.</h3>
   </div>
   <div class="flex flex-col md:flex-row justify-center px-4 sm:px-6 md:px-8">
     <div class="w-full md:w-[800px] relative">
@@ -277,18 +277,18 @@
       <p class="text-sm poppins font-normal leading-none text-gray-600 dark:text-slate-400 mb-2">* indicates required field</p>
   
       <label for="name" class="sr-only">Name *</label>
-      <input type="text" id="name" name="name" value={form?.contact?.name?.value ?? ''} placeholder="Name *" aria-label="Name" class="poppins p-2 bg-transparent border border-solid border-indigo-500 dark:border-violet-700 rounded-lg group hover:border-violet-400 duration-200 transition-height focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} required />
+      <input type="text" id="name" name="name" value={form?.contact?.name?.value ?? ''} placeholder="Name *" aria-label="Name" class="poppins p-2 bg-transparent border border-solid border-indigo-500 dark:border-violet-700 rounded-lg group hover:border-violet-400 duration-200 transition-height focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} required />
       <p class="error text-xs mt-1 min-h-5 text-red-400">{form?.nameError ?? ''}</p>
   
       <label for="email" class="sr-only">Email *</label>
-      <input type="email" id="email" name="email" value={form?.contact?.email?.value ?? ''} placeholder="Email *" aria-label="Email" class="poppins p-2 bg-transparent border border-solid border-indigo-500 dark:border-violet-700 rounded-lg group hover:border-violet-400 duration-200 transition-height focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} required />
+      <input type="email" id="email" name="email" value={form?.contact?.email?.value ?? ''} placeholder="Email *" aria-label="Email" class="poppins p-2 bg-transparent border border-solid border-indigo-500 dark:border-violet-700 rounded-lg group hover:border-violet-400 duration-200 transition-height focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} required />
       <p class="error text-xs mt-1 min-h-5 text-red-400">{form?.emailError ?? ''}</p>
   
       <label for="message" class="sr-only">Message</label>
-      <textarea id="message" name="message" value={form?.contact?.message?.value ?? ''} placeholder="Message" aria-label="Message" rows="6" class="poppins mb-5 p-2 bg-transparent border border-solid border-indigo-500 dark:border-violet-700 rounded-lg group hover:border-violet-400 duration-200 transition-height focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0}></textarea>
+      <textarea id="message" name="message" value={form?.contact?.message?.value ?? ''} placeholder="Message" aria-label="Message" rows="6" class="poppins mb-5 p-2 bg-transparent border border-solid border-indigo-500 dark:border-violet-700 rounded-lg group hover:border-violet-400 duration-200 transition-height focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0}></textarea>
   
       <div class="flex justify-start">
-        <button type="submit" aria-label="Work With Me" class:submitted class:loading class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-gray-100 text-slate-950 cursor-pointer hover:bg-gray-200 duration-200 group/ContactBtn whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} disabled={loading}>
+        <button type="submit" aria-label="Work With Me" class:submitted class:loading class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-gray-100 text-slate-950 cursor-pointer hover:bg-gray-200 duration-200 group/ContactBtn whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} disabled={loading}>
             <div class="absolute top-0 right-full w-full h-full bg-violet-800 opacity-20 group-hover/ContactBtn:translate-x-full z-[0] duration-200"></div>
             <h4 class="relative z-[1]">{submitted ? successMessage : loading ? 'Sending message' : 'Work With Me'}</h4>
         </button>
