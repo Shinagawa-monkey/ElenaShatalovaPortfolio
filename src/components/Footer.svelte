@@ -124,7 +124,7 @@
       </ul>
     </nav>
   </div>
-  <p class="text-sm md:text-base mt-2 opacity-50 flex items-center poppins whitespace-nowrap flex-wrap justify-center dark:text-white">
+  <p class="text-sm md:text-base mt-2 opacity-50 flex items-center poppins whitespace-nowrap flex-wrap justify-center text-white">
    Crafted with 
    {#if $theme === 'light'}
       <img class="ml-1 mr-1 w-6 h-6" src="/images/heartLight.svg" alt="Heart Icon">
