@@ -80,7 +80,7 @@
       {/if}
     </button> -->
 
-    <button on:click={toggleShowMore} aria-label={showMore ? "Show Less" : "Read More"} class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-indigo-500 dark:bg-violet-500 text-white dark:text-slate-950 cursor-pointer hover:bg-indigo-600 dark:hover:bg-violet-600 duration-200 group/expandBtn focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" tabindex={$isMenuOpen ? -1 : 0}>
+    <button on:click={toggleShowMore} aria-label={showMore ? "Show Less" : "Read More"} class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-indigo-700 dark:bg-violet-500 text-white dark:text-slate-950 cursor-pointer hover:bg-indigo-800 dark:hover:bg-violet-600 duration-200 group/expandBtn focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" tabindex={$isMenuOpen ? -1 : 0}>
       <div class="absolute top-0 right-full w-full h-full bg-gray-200 opacity-20 group-hover/expandBtn:translate-x-full z-[0] duration-200"></div>
       {#if showMore}
         <span class="relative z-[1]">Show Less</span>
