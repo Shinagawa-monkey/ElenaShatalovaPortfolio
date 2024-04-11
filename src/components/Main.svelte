@@ -238,7 +238,7 @@
       <ul class="relative pl-8 md:pl-10">
         {#each benefits as benefit}
         <li class="mb-10 ml-4 last:mb-0">
-          <figure class="absolute -left-9  stroke-gray-800 dark:stroke-slate-700 -mt-1 sm:mt-0 md:mt-1">
+          <figure class="absolute -left-9 stroke-gray-800 dark:stroke-slate-700 -mt-1 sm:mt-0 md:mt-1">
             <svg class="-rotate-90" width="75" height="75" viewBox="0 0 100 100">
               <circle cx="75" cy="50" r="20" class="stroke-indigo-500 dark:stroke-violet-700 stroke-1 fill-none" />
               <circle cx="75" cy="50" r="20" class="stroke-[5px] fill-gray-200 dark:fill-slate-50" />
@@ -246,7 +246,7 @@
             </svg>
           </figure>
           <div class="flex flex-wrap gap-4 flex-row items-center justify-start text-xs md:text-sm section-title">
-            <span class="inline-block px-3 py-1 font-semibold poppins text-gray-900 dark:text-white bg-indigo-500 dark:bg-violet-700 rounded-full shadow-md text-sm sm:text-base">
+            <span class="inline-block px-3 py-1 font-semibold poppins text-gray-950 dark:text-white bg-indigo-500 dark:bg-violet-700 rounded-full shadow-md text-sm sm:text-base">
              {benefit.year}
             </span>
             <h4 class="text-2xl sm:text-3xl md:text-5xl font-semibold poppins text-gray-900 dark:text-white">
@@ -288,7 +288,7 @@
       <textarea id="message" name="message" value={form?.contact?.message?.value ?? ''} placeholder="Message" aria-label="Message" rows="6" class="poppins mb-5 p-2 bg-transparent border border-solid border-indigo-600 dark:border-violet-700 rounded-lg group hover:border-indigo-700 dark:hover:border-violet-400 duration-200 transition-height focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0}></textarea>
   
       <div class="flex justify-start">
-        <button type="submit" aria-label="Work With Me" class:submitted class:loading class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-blue-300 dark:bg-gray-100 text-gray-900 dark:text-slate-950 cursor-pointer hover:bg-blue-400 dark:hover:bg-gray-200 duration-200 group/ContactBtn whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} disabled={loading}>
+        <button type="submit" aria-label="Work With Me" class:submitted class:loading class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-indigo-700 dark:bg-gray-100 text-white dark:text-slate-950 cursor-pointer hover:bg-indigo-800 dark:hover:bg-gray-200 duration-200 group/ContactBtn whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} disabled={loading}>
             <div class="absolute top-0 right-full w-full h-full bg-indigo-500 dark:bg-violet-800 opacity-20 group-hover/ContactBtn:translate-x-full z-[0] duration-200"></div>
             <h4 class="relative z-[1]">{submitted ? successMessage : loading ? 'Sending message' : 'Work With Me'}</h4>
         </button>
