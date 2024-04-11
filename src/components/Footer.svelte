@@ -69,6 +69,7 @@
 
 <script>
   import { isMenuOpen } from '$lib/menuStore';
+  import { theme } from '$lib/theme';
 </script>
 
 <footer class="py-5 sm:py-10 bg-blue-500 dark:bg-black border-t border-solid border-indigo-900 dark:border-violet-950 flex flex-col gap-2 sm:gap-4 justify-center items-center">
@@ -123,8 +124,14 @@
       </ul>
     </nav>
   </div>
-  <p class="text-sm md:text-base mt-2 opacity-50 flex items-center poppins whitespace-nowrap flex-wrap justify-center text-white">
-   Crafted with <img class="ml-1 mr-1 w-6 h-6" src="/images/heartLight.svg" alt="Heart Icon" /> <span class="flex items-center">by Elena Shatalova &copy; {new Date().getFullYear()}</span>.
+  <p class="text-sm md:text-base mt-2 opacity-50 flex items-center poppins whitespace-nowrap flex-wrap justify-center dark:text-white">
+   Crafted with 
+   {#if $theme === 'light'}
+      <img class="ml-1 mr-1 w-6 h-6" src="/images/heartLight.svg" alt="Heart Icon">
+    {:else}
+      <img class="ml-1 mr-1 w-6 h-6" src="/images/heartDark.svg" alt="Heart Icon">
+    {/if}
+    <span class="flex items-center">by Elena Shatalova &copy; {new Date().getFullYear()}</span>.
   </p>
 </footer>
 
