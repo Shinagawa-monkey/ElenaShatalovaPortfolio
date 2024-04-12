@@ -61,7 +61,7 @@
     <div class="flex flex-col gap-2">
       <ul class="flex flex-wrap gap-2">
         {#each step.technologies.split(', ') as tag}
-          <li class="bg-gray-200 dark:bg-violet-700 text-violet-600 dark:text-white px-3 py-1 rounded-full shadow-md text-sm sm:text-base whitespace-nowrap border-violet-400 dark:border-none">{tag}</li>
+          <li class="bg-gray-100 dark:bg-violet-700 text-violet-600 dark:text-white px-3 py-1 rounded-full shadow-md text-sm sm:text-base whitespace-nowrap border-gray-300 dark:border-none">{tag}</li>
         {/each}
       </ul>
     </div>
