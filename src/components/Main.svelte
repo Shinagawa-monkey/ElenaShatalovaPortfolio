@@ -234,14 +234,14 @@
   <div class="flex flex-col md:flex-row justify-center px-4 sm:px-6 md:px-8">
     <div class="w-full md:w-[800px] relative">
       <!-- Line on the left side of the ul -->
-      <div class="absolute h-full left-0 top-0 w-[4px] bg-gray-800 dark:bg-slate-700"></div>
+      <div class="absolute h-full left-0 top-0 w-[4px] bg-gray-700 dark:bg-slate-700"></div>
       <ul class="relative pl-8 md:pl-10">
         {#each benefits as benefit}
         <li class="mb-10 ml-4 last:mb-0">
-          <figure class="absolute -left-9 stroke-gray-800 dark:stroke-slate-700 -mt-1 sm:mt-0 md:mt-1">
+          <figure class="absolute -left-9 stroke-gray-700 dark:stroke-slate-700 -mt-1 sm:mt-0 md:mt-1">
             <svg class="-rotate-90" width="75" height="75" viewBox="0 0 100 100">
               <circle cx="75" cy="50" r="20" class="stroke-violet-500 dark:stroke-violet-700 stroke-1 fill-none" />
-              <circle cx="75" cy="50" r="20" class="stroke-[5px] fill-gray-200 dark:fill-slate-50" />
+              <circle cx="75" cy="50" r="20" class="stroke-[5px] fill-gray-100 dark:fill-slate-50" />
               <circle cx="75" cy="50" r="10" class="stroke-1 fill-violet-500 dark:fill-violet-700" />
             </svg>
           </figure>
