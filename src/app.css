@@ -18,8 +18,7 @@ html {
 /* css vars */
 :root {
   /* --background-color: rgb(180 225 245); */
-  /* --background-color: rgb(191 219 254); */
-  --background-color: rgb(219 234 254);
+  --background-color: rgb(191 219 254);
   --text: rgb(17 24 39);
   /*bg-blue-200 text-gray-900 */
 }
