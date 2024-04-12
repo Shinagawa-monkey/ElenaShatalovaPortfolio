@@ -289,8 +289,7 @@
   
       <div class="flex justify-start">
         <button type="submit" aria-label="Work With Me" class:submitted class:loading class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-violet-600 dark:bg-gray-100 text-white dark:text-slate-950 cursor-pointer hover:bg-violet-700 dark:hover:bg-gray-200 duration-200 group/ContactBtn whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} disabled={loading}>
-            <div class="absolute top-0 right-full w-full h-full bg-violet-500 dark:bg-violet-800 dark:opacity-10 group-hover/ContactBtn:translate-x-full z-[0] duration-200"></div>
-            <!-- <div class="absolute top-0 right-full w-full h-full bg-violet-500 dark:bg-violet-800 opacity-20 group-hover/ContactBtn:translate-x-full z-[0] duration-200"></div> -->
+            <div class="absolute top-0 right-full w-full h-full bg-violet-500 dark:bg-violet-800 opacity-10  dark:opacity-20 group-hover/ContactBtn:translate-x-full z-[0] duration-200"></div>
             <h4 class="relative z-[1]">{submitted ? successMessage : loading ? 'Sending message' : 'Work With Me'}</h4>
         </button>
       </div>  
