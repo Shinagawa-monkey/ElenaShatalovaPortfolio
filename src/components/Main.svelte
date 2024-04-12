@@ -246,7 +246,7 @@
             </svg>
           </figure>
           <div class="flex flex-wrap gap-4 flex-row items-center justify-start text-xs md:text-sm section-title">
-            <span class="inline-block px-3 py-1 font-semibold poppins text-violet-600 dark:text-white bg-white dark:bg-violet-700 rounded-full shadow-md text-sm sm:text-base">
+            <span class="inline-block px-3 py-1 font-semibold poppins text-gray-950 dark:text-white bg-violet-500 dark:bg-violet-700 rounded-full shadow-md text-sm sm:text-base">
              {benefit.year}
             </span>
             <h4 class="text-2xl sm:text-3xl md:text-5xl font-semibold poppins text-gray-900 dark:text-white">
