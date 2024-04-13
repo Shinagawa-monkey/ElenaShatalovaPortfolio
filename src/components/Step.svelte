@@ -37,7 +37,7 @@
   });
 </script>
 
-<div style="height: {height}" class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-violet-600 dark:border-violet-700 text-center cursor-default group hover:border-violet-700 dark:hover:border-violet-400 duration-200 transition-height">
+<div style="height: {height}" class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-violet-600 dark:border-violet-700 text-center cursor-default group hover:border-violet-800 dark:hover:border-violet-400 duration-200 transition-height">
   <div class="bg-blue-200 dark:bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200">
     <i class={step.icon} />
   </div>
@@ -61,7 +61,7 @@
     <div class="flex flex-col gap-2">
       <ul class="flex flex-wrap gap-2">
         {#each step.technologies.split(', ') as tag}
-          <li class="bg-violet-400 dark:bg-violet-700 text-gray-950 dark:text-white px-3 py-1 rounded-full shadow-md text-sm sm:text-base whitespace-nowrap border-gray-800 dark:border-none">{tag}</li>
+          <li class="bg-white dark:bg-violet-700 text-violet-800 dark:text-white px-3 py-1 rounded-full shadow-md text-sm sm:text-base whitespace-nowrap border-gray-800 dark:border-none">{tag}</li>
         {/each}
       </ul>
     </div>
