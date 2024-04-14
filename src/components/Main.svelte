@@ -143,9 +143,9 @@
   <div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10">
     <h1 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">
       <span class="text-4xl sm:text-5xl md:text-6xl">Hi! I'm </span>
-      <span class="poppins text-violet-500 dark:text-violet-400 text-4xl sm:text-5xl md:text-6xl">Elena</span> <span class="text-4xl sm:text-5xl md:text-6xl">Shatalova</span><br />
-      Software <span class="poppins text-violet-600 dark:text-violet-400">Engineer</span> &amp; <br />
-      Full Stack <span class="poppins text-violet-600 dark:text-violet-400">Developer</span>
+      <span class="poppins text-violet-700 dark:text-violet-400 text-4xl sm:text-5xl md:text-6xl">Elena</span> <span class="text-4xl sm:text-5xl md:text-6xl">Shatalova</span><br />
+      Software <span class="poppins text-teal-600 dark:text-violet-400">Engineer</span> &amp; <br />
+      Full Stack <span class="poppins text-violet-700 dark:text-violet-400">Developer</span>
     </h1>
   
     <p class="text-base sm:text-lg md:text-xl text-pretty">I specialize in 
