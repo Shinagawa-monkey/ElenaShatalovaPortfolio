@@ -144,23 +144,23 @@
     <h1 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">
       <span class="text-4xl sm:text-5xl md:text-6xl">Hi! I'm </span>
       <span class="poppins text-violet-700 dark:text-violet-400 text-4xl sm:text-5xl md:text-6xl">Elena</span> <span class="text-4xl sm:text-5xl md:text-6xl">Shatalova</span><br />
-      Software <span class="poppins text-teal-600 dark:text-violet-400">Engineer</span> &amp; <br />
+      Software <span class="poppins text-violet-700 dark:text-violet-400">Engineer</span> &amp; <br />
       Full Stack <span class="poppins text-violet-700 dark:text-violet-400">Developer</span>
     </h1>
   
     <p class="text-base sm:text-lg md:text-xl text-pretty">I specialize in 
-      <span class="text-violet-600 dark:text-violet-400">JavaScript</span> 
-      (<span class="text-violet-600 dark:text-violet-400">React</span>, <span class="text-violet-600 dark:text-violet-400">Next.js</span>, or <span class="text-violet-600 dark:text-violet-400">SvelteKit</span>), 
-      <span class="text-violet-600 dark:text-violet-400">Tailwind CSS</span>,  
-      <span class="text-violet-600 dark:text-violet-400">Bootstrap</span>, and the powerful combo of 
-      <span class="text-violet-600 dark:text-violet-400">Node.js + Express.js</span>.<br />
-      Database challenges? Consider them solved—be it <span class="text-violet-600 dark:text-violet-400">MongoDB</span>, 
-      <span class="text-violet-600 dark:text-violet-400">PostgreSQL</span>, 
-      <span class="text-violet-600 dark:text-violet-400">Firebase</span>, or 
-      <span class="text-violet-600 dark:text-violet-400">Firestore</span>. Let's turn ideas into innovation!
+      <span class="text-violet-700 dark:text-violet-400">JavaScript</span> 
+      (<span class="text-violet-700 dark:text-violet-400">React</span>, <span class="text-violet-700 dark:text-violet-400">Next.js</span>, or <span class="text-violet-700 dark:text-violet-400">SvelteKit</span>), 
+      <span class="text-violet-700 dark:text-violet-400">Tailwind CSS</span>,  
+      <span class="text-violet-700 dark:text-violet-400">Bootstrap</span>, and the powerful combo of 
+      <span class="text-violet-700 dark:text-violet-400">Node.js + Express.js</span>.<br />
+      Database challenges? Consider them solved—be it <span class="text-violet-700 dark:text-violet-400">MongoDB</span>, 
+      <span class="text-violet-700 dark:text-violet-400">PostgreSQL</span>, 
+      <span class="text-violet-700 dark:text-violet-400">Firebase</span>, or 
+      <span class="text-violet-700 dark:text-violet-400">Firestore</span>. Let's turn ideas into innovation!
     </p>
 
-    <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" class="font-medium blueShadowLight dark:blueShadow  mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-violet-600 dark:text-slate-950 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" tabindex={$isMenuOpen ? -1 : 0} aria-label="LinkedIn Profile">
+    <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" class="font-medium blueShadowLight dark:blueShadow  mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-violet-700 dark:text-slate-950 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" tabindex={$isMenuOpen ? -1 : 0} aria-label="LinkedIn Profile">
       <div class="absolute top-0 right-full w-full h-full bg-violet-600 dak:bg-violet-400 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
         <span class="relative z-[1]">Get in touch &rarr;</span>
     </a>
@@ -175,19 +175,19 @@
   <section id="projects" class="pt-20 lg:pt-24 flex flex-col gap-10 sm:gap-12 md:gap-14">
     <div class="flex flex-col gap-2 items-center justify-center text-center">
       <h2 class="text-large sm:text-xl md:text-2xl text-balance">A few of my creative endeavors.</h2>
-      <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">Curious to <span class="poppins text-violet-600 dark:text-violet-400">see</span> my work?</h3>
+      <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">Curious to <span class="poppins text-violet-700 dark:text-violet-400">see</span> my work?</h3>
      </div>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
       <Step step={steps[0]} images={{dark: projectImagesDark[0], light: projectImagesLight[0]}}>
-        <p class="text-sm sm:text-base md:text-lg text-pretty">Tasty Treats is a refined <strong class="text-violet-600 dark:text-violet-400">content management system app</strong> designed for easy recipe exploration. Easily discover, favorite, search, and comment on recipes with this user-friendly app. 
+        <p class="text-sm sm:text-base md:text-lg text-pretty">Tasty Treats is a refined <strong class="text-violet-700 dark:text-violet-400">content management system app</strong> designed for easy recipe exploration. Easily discover, favorite, search, and comment on recipes with this user-friendly app. 
         </p>
       </Step>
       <Step step={steps[1]} images={{dark: projectImagesDark[1], light: projectImagesLight[1]}}>
-        <p class="text-sm sm:text-base md:text-lg text-pretty">ProjectHub is a robust <strong class="text-violet-600 dark:text-violet-400">project management app</strong>. Seamlessly add, assign, track, and comment on projects with precision. Effortlessly explore projects by category and owner.
+        <p class="text-sm sm:text-base md:text-lg text-pretty">ProjectHub is a robust <strong class="text-violet-700 dark:text-violet-400">project management app</strong>. Seamlessly add, assign, track, and comment on projects with precision. Effortlessly explore projects by category and owner.
         </p>
       </Step>
       <Step step={steps[2]} images={{dark: projectImagesDark[2], light: projectImagesLight[2]}}>
-        <p class="text-sm sm:text-base md:text-lg text-pretty">My Wallet is an elegant <strong class="text-violet-600 dark:text-violet-400">financial transaction management app</strong> that helps you manage your financial transactions in a simple and efficient way. Track, edit, and delete entries with ease.
+        <p class="text-sm sm:text-base md:text-lg text-pretty">My Wallet is an elegant <strong class="text-violet-700 dark:text-violet-400">financial transaction management app</strong> that helps you manage your financial transactions in a simple and efficient way. Track, edit, and delete entries with ease.
         </p>
       </Step>
     </div>
@@ -229,7 +229,7 @@
 <section id="about" class="pt-20 lg:pt-24 flex flex-col gap-10 sm:gap-12 md:gap-14 relative">
   <div class="flex flex-col gap-2 items-center justify-center text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-violet-400 dark:before:bg-violet-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-violet-400 dark:after:bg-violet-700 py-4">
     <h2 class="text-large sm:text-xl md:text-2xl text-balance">Want to know more?</h2>
-    <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">A bit <span class="poppins text-violet-600 dark:text-violet-400">about</span> me.</h3>
+    <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">A bit <span class="poppins text-violet-700 dark:text-violet-400">about</span> me.</h3>
   </div>
   <div class="flex flex-col md:flex-row justify-center px-4 sm:px-6 md:px-8">
     <div class="w-full md:w-[800px] relative">
@@ -241,7 +241,7 @@
           <figure class="absolute -left-9 stroke-gray-800 dark:stroke-slate-700 -mt-1 sm:mt-0 md:mt-1">
             <svg class="-rotate-90" width="75" height="75" viewBox="0 0 100 100">
               <circle cx="75" cy="50" r="20" class="stroke-violet-500 dark:stroke-violet-700 stroke-1 fill-none" />
-              <circle cx="75" cy="50" r="20" class="stroke-[5px] fill-gray-100 dark:fill-slate-50" />
+              <circle cx="75" cy="50" r="20" class="stroke-[5px] fill-gray-50 dark:fill-slate-50" />
               <circle cx="75" cy="50" r="10" class="stroke-1 fill-violet-500 dark:fill-violet-700" />
             </svg>
           </figure>
@@ -269,7 +269,7 @@
 <section id="contact" class="py-20 lg:py-24 flex flex-col gap-10 sm:gap-12 md:gap-14">
   <div class="flex flex-col gap-2 items-center justify-center text-center">
     <h2 class="text-large sm:text-xl md:text-2xl text-balance">Get in Touch</h2>
-    <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">Let's <span class="poppins text-violet-600 dark:text-violet-400">Connect</span></h3>
+    <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">Let's <span class="poppins text-violet-700 dark:text-violet-400">Connect</span></h3>
   </div>
 
   <div class="flex justify-center">
