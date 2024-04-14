@@ -21,7 +21,7 @@ html {
   /* --background-color: rgb(191 219 254); */
   --background-color: rgb(147 197 253);
   --text: rgb(17 24 39);
-  /*bg-blue-200 text-gray-900 */
+  /*bg-blue-300 text-gray-900 */
 }
 
 [data-theme="dark"] {
