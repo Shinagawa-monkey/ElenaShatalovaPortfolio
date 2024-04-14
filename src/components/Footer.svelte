@@ -72,7 +72,7 @@
   import { theme } from '$lib/theme';
 </script>
 
-<footer class="py-5 sm:py-10 bg-blue-700 dark:bg-black border-t border-solid border-gray-800 dark:border-violet-950 flex flex-col gap-2 sm:gap-4 justify-center items-center">
+<footer class="py-5 sm:py-10 bg-blue-700 dark:bg-black border-t border-solid border-gray-300 flex flex-col gap-2 sm:gap-4 justify-center items-center">
   <div class="container max-w-screen-lg mx-auto flex flex-wrap justify-center">
     <nav>
       <ul class="flex gap-2 md:gap-4">
