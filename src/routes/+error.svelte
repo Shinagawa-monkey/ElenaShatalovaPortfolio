@@ -56,5 +56,6 @@
     justify-content: center;
     align-items: center; */
     min-height: calc(100vh - (var(--header-height) + var(--footer-height)));
+    min-height: calc(100svh - (var(--header-height) + var(--footer-height)));
   }
 </style>
