@@ -14,9 +14,10 @@
   <h1>An error occurred</h1>
   <p>Sorry, something went wrong.</p>
 <button on:click={redirectToHome}>Go back to Home</button> -->
+<!-- 
+<main class="flex flex-col items-center justify-center min-h-screen px-4 pb-8"> -->
+<main class="flex flex-col items-center justify-center min-h-fit px-4 pb-8">
 
-<main class="flex flex-col items-center justify-center min-h-screen px-4 pb-8">
-  <div class="container flex flex-col items-center justify-center flex-1">
   <!-- Error Image -->
   {#if $theme === 'light'}
     <img src={"/images/notFoundLight.png"} alt="Page Not Found" class="max-w-md w-full mb-4" loading="lazy" />
@@ -36,7 +37,7 @@
     <div class="absolute top-0 right-full w-full h-full bg-violet-400 dark:bg-violet-800 opacity-20 group-hover/GoHomeBtn:translate-x-full z-0 duration-200"></div>
       Return to Homepage
   </button>
-  </div>
+
 </main>
 
 
@@ -47,13 +48,3 @@
     <h1>Whoops. We weren't expecting that</h1>
     <p>We're investigating the issue</p>
 {/if} -->
-<style>
-  /* Adjustments for error page */
-main {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-}
-
-</style>
