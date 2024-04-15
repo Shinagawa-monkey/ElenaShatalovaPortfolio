@@ -16,7 +16,7 @@
 <button on:click={redirectToHome}>Go back to Home</button> -->
 <!-- 
 <main class="flex flex-col items-center justify-center min-h-screen px-4 pb-8"> -->
-<main class="flex flex-col items-center justify-center min-h-fit px-4 pb-8">
+<main class="flex flex-col items-center justify-center px-4 pb-8">
 
   <!-- Error Image -->
   {#if $theme === 'light'}
@@ -48,3 +48,15 @@
     <h1>Whoops. We weren't expecting that</h1>
     <p>We're investigating the issue</p>
 {/if} -->
+<style>
+
+  /* Set minimum height for main content */
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* min-height: calc(100vh - (var(--header-height) + var(--footer-height))); */
+  }
+</style>
