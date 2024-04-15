@@ -14,9 +14,8 @@
   <h1>An error occurred</h1>
   <p>Sorry, something went wrong.</p>
 <button on:click={redirectToHome}>Go back to Home</button> -->
-<!-- 
-<main class="flex flex-col items-center justify-center min-h-screen px-4 pb-8"> -->
-<main class="flex flex-col items-center justify-center px-4 pb-8">
+
+<main class="flex flex-1 flex-col items-center justify-center min-h-screen px-4 pb-8">
 
   <!-- Error Image -->
   {#if $theme === 'light'}
@@ -33,7 +32,7 @@
   </p>
 
   <!-- Return Home Button -->
-  <button on:click={redirectToHome} class="relative text-base sm:text-lg md:text-xl font-medium poppins overflow-hidden px-6 py-3 rounded-full bg-white dark:bg-gray-100 text-violet-700 dark:text-slate-900 cursor-pointer z-[1] hover:bg-gray-50 dark:hover:bg-gray-200 duration-200 group/GoHomeBtn whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50 border border-violet-400 dark:order-violet-700" tabindex={$isMenuOpen ? -1 : 0} aria-label="Return to Homepage">
+  <button on:click={redirectToHome} class="relative text-base sm:text-lg md:text-xl font-medium poppins overflow-hidden px-6 py-3 rounded-full bg-white dark:bg-gray-100 text-violet-700 dark:text-slate-900 cursor-pointer z-10 hover:bg-gray-50 dark:hover:bg-gray-200 duration-200 group/GoHomeBtn whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50 border border-violet-400 dark:order-violet-700" tabindex={$isMenuOpen ? -1 : 0} aria-label="Return to Homepage">
     <div class="absolute top-0 right-full w-full h-full bg-violet-400 dark:bg-violet-800 opacity-20 group-hover/GoHomeBtn:translate-x-full z-0 duration-200"></div>
       Return to Homepage
   </button>
@@ -49,15 +48,13 @@
     <p>We're investigating the issue</p>
 {/if} -->
 <style>
-
   /* Set minimum height for main content */
   main {
-    flex: 1;
-    display: flex;
+    /* flex: 1; */
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    min-height: auto;
-    /* min-height: calc(100vh - (var(--header-height) + var(--footer-height))); */
+    align-items: center; */
+    min-height: calc(100vh - (var(--header-height) + var(--footer-height)));
   }
 </style>
