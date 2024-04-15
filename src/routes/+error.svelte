@@ -32,7 +32,7 @@
   </p>
 
   <!-- Return Home Button -->
-  <button on:click={redirectToHome} class="relative text-base sm:text-lg md:text-xl font-medium poppins overflow-hidden px-6 py-3 rounded-full bg-white dark:bg-gray-100 text-violet-700 dark:text-slate-900 cursor-pointer z-10 hover:bg-gray-50 dark:hover:bg-gray-200 duration-200 group/GoHomeBtn whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50 border border-violet-400 dark:order-violet-700" tabindex={$isMenuOpen ? -1 : 0} aria-label="Return to Homepage">
+  <button on:click={redirectToHome} class="relative text-base sm:text-lg md:text-xl font-medium poppins overflow-hidden px-6 py-3 rounded-full bg-white dark:bg-gray-100 text-violet-700 dark:text-slate-900 cursor-pointer z-[1] hover:bg-gray-50 dark:hover:bg-gray-200 duration-200 group/GoHomeBtn whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-50 border border-violet-400 dark:order-violet-700" tabindex={$isMenuOpen ? -1 : 0} aria-label="Return to Homepage">
     <div class="absolute top-0 right-full w-full h-full bg-violet-400 dark:bg-violet-800 opacity-20 group-hover/GoHomeBtn:translate-x-full z-0 duration-200"></div>
       Return to Homepage
   </button>
