@@ -57,6 +57,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: auto;
     /* min-height: calc(100vh - (var(--header-height) + var(--footer-height))); */
   }
 </style>
