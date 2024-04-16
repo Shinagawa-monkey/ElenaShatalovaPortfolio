@@ -160,10 +160,23 @@
       <span class="text-violet-700 dark:text-violet-400">Firestore</span>. Let's turn ideas into innovation!
     </p>
 
-    <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" class="font-medium blueShadowLight dark:blueShadow  mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-violet-700 dark:text-slate-950 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" tabindex={$isMenuOpen ? -1 : 0} aria-label="LinkedIn Profile">
-      <div class="absolute top-0 right-full w-full h-full bg-violet-600 dak:bg-violet-400 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
+    <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" class="font-medium blueShadowLight dark:blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-violet-700 dark:text-slate-950 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" tabindex={$isMenuOpen ? -1 : 0} aria-label="LinkedIn Profile">
+      <div class="absolute top-0 right-full w-full h-full bg-violet-600 dark:bg-violet-400 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
         <span class="relative z-[1]">Get in touch &rarr;</span>
     </a>
+    <!-- <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" class="font-medium blueShadowLight dark:blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white dark:bg-gray-100 text-violet-700 dark:text-slate-900 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-200 duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap border-violet-400 dark:border-violet-700" tabindex={$isMenuOpen ? -1 : 0} aria-label="LinkedIn Profile">
+      <div class="absolute top-0 right-full w-full h-full bg-violet-400 dark:bg-violet-800 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
+        <span class="relative z-[1]">Get in touch &rarr;</span>
+    </a> -->
+    <!-- <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" class="font-medium blueShadowLight dark:blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white dark:bg-gray-100 text-violet-700 dark:text-slate-900 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 hover:bg-gray-50 dark:hover:bg-gray-200 focus-visible:ring-opacity-50 whitespace-nowrap" tabindex={$isMenuOpen ? -1 : 0} aria-label="LinkedIn Profile">
+      <div class="absolute top-0 right-full w-full h-full bg-violet-400 dark:bg-violet-800 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
+      <span class="relative z-[1]">Get in touch &rarr;</span>
+    </a> -->
+    <!-- <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" class="font-medium blueShadowLight dark:blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white dark:bg-gray-100 text-violet-700 dark:text-slate-900 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" tabindex={$isMenuOpen ? -1 : 0} aria-label="LinkedIn Profile">
+      <div class="absolute top-0 right-full w-full h-full bg-violet-400 dark:bg-violet-800 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
+      <span class="relative z-[1]">Get in touch &rarr;</span>
+    </a> -->
+    
   </div>
 
   <div class="relative shadow-2xl grid place-items-center">
@@ -292,7 +305,7 @@
             <div class="absolute top-0 right-full w-full h-full bg-violet-500 dark:bg-violet-800 opacity-10  dark:opacity-20 group-hover/ContactBtn:translate-x-full z-[0] duration-200"></div>
             <h4 class="relative z-[1]">{submitted ? successMessage : loading ? 'Sending message' : 'Work With Me'}</h4>
         </button> -->
-        <button type="submit" aria-label="Work With Me" class:submitted class:loading class="font-medium text-base md:text-lg poppins relative overflow-hidden px-6 py-2 rounded-full bg-white dark:bg-gray-100 text-violet-700 dark:text-slate-900 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-200 duration-200 group/ContactBtn whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 border border-violet-400 dark:order-violet-700" tabindex={$isMenuOpen ? -1 : 0} disabled={loading}>
+        <button type="submit" aria-label="Work With Me" class:submitted class:loading class="font-medium text-base md:text-lg poppins relative overflow-hidden px-6 py-2 rounded-full bg-white dark:bg-gray-100 text-violet-700 dark:text-slate-900 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-200 duration-200 group/ContactBtn whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 border border-violet-400 dark:border-violet-700" tabindex={$isMenuOpen ? -1 : 0} disabled={loading}>
           <div class="absolute top-0 right-full w-full h-full bg-violet-400 dark:bg-violet-800 opacity-20 group-hover/ContactBtn:translate-x-full z-[0] duration-200"></div>
           <h4 class="relative z-[1]">{submitted ? successMessage : loading ? 'Sending message' : 'Work With Me'}</h4>
         </button>
