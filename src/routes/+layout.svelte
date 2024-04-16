@@ -40,7 +40,7 @@
 
   <div class={"fixed bottom-5 sm:bottom-10 right-4 duration-200 z-[2] " + (y > 0 ? ' opacity-full pointer-events-auto' : ' opacity-0 pointer-events-none')}>
     <button on:click={goTop} class="rounded-full aspect-square bg-violet-600 dark:bg-slate-900 text-white dark:text-violet-400 px-3 sm:px-4  hover:bg-violet-700 dark:hover:bg-slate-800 cursor-pointer grid place-items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} aria-label="Scroll to top">
-        <i class="fa-solid fa-arrow-up" />
+        <i class="fa-solid fa-arrow-up select-none" />
     </button>
   </div>
   <Header {y} {innerHeight} {theme}/>

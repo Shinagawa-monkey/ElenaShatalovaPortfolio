@@ -98,7 +98,7 @@
   <header class={"sticky z-[2] top-0 duration-200 px-4 flex items-center justify-between border-b border-solid " + (y > 0 && !isOpen ? " py-4 bg-blue-300 dark:bg-slate-950 border-gray-800 dark:border-violet-950" : " py-6 bg-transparent border-transparent")}>
 
   <div class="flex items-center justify-between w-full">
-    <h1 bind:this={logo} class="font-medium z-[3]" id="logo" aria-label="Logo: Elena Shatalova">
+    <h1 bind:this={logo} class="font-medium z-[3] select-none" id="logo" aria-label="Logo: Elena Shatalova">
       <b class="font-bold poppins">Elena</b> Shatalova
     </h1>
     <!-- Menu Items -->
@@ -115,7 +115,7 @@
         {/if}
       
       <li class="flex items-center justify-center">
-        <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank"  class="font-medium blueShadowLight dark:blueShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-violet-600 dark:text-slate-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap">
+        <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank"  class="font-medium blueShadowLight dark:blueShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-violet-600 dark:text-slate-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap select-none">
           <div class="absolute top-0 right-full w-full h-full bg-violet-600 dak:bg-violet-400 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
           <span class="relative z-[1]">Get in touch</span>
         </a>
@@ -172,7 +172,7 @@
    
     <div class="flex items-center justify-center w-full px-5 py-3 gap-4">
       <li>
-        <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" class="font-medium block blueShadowLight dark:blueShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-violet-600 dark:text-slate-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap">
+        <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" class="font-medium block blueShadowLight dark:blueShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-violet-600 dark:text-slate-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap select-none">
           <div class="absolute top-0 right-full w-full h-full bg-violet-600 dak:bg-violet-400 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
             <h4 class="relative z-[1]">Get in touch</h4>
         </a>

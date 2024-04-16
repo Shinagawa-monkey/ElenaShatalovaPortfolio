@@ -141,7 +141,7 @@
 <main class="flex flex-col flex-1 p-4">
   <section id="intro" class="grid grid-cols-1 lg:grid-cols-2 gap-10 pt-8 sm:pt-14">
   <div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10">
-    <h1 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">
+    <h1 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance select-none">
       <span class="text-4xl sm:text-5xl md:text-6xl">Hi! I'm </span>
       <span class="poppins text-violet-700 dark:text-violet-400 text-4xl sm:text-5xl md:text-6xl">Elena</span> <span class="text-4xl sm:text-5xl md:text-6xl">Shatalova</span><br />
       Software <span class="poppins text-violet-700 dark:text-violet-400">Engineer</span> &amp; <br />
@@ -160,7 +160,7 @@
       <span class="text-violet-700 dark:text-violet-400">Firestore</span>. Let's turn ideas into innovation!
     </p>
 
-    <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" class="font-medium blueShadowLight dark:blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-violet-700 dark:text-slate-950 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" tabindex={$isMenuOpen ? -1 : 0} aria-label="LinkedIn Profile">
+    <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" class="font-medium blueShadowLight dark:blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-violet-700 dark:text-slate-950 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap select-none" tabindex={$isMenuOpen ? -1 : 0} aria-label="LinkedIn Profile">
       <div class="absolute top-0 right-full w-full h-full bg-violet-600 dark:bg-violet-400 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
         <span class="relative z-[1]">Get in touch &rarr;</span>
     </a>
@@ -187,8 +187,8 @@
   
   <section id="projects" class="pt-20 lg:pt-24 flex flex-col gap-10 sm:gap-12 md:gap-14">
     <div class="flex flex-col gap-2 items-center justify-center text-center">
-      <h2 class="text-large sm:text-xl md:text-2xl text-balance">A few of my creative endeavors.</h2>
-      <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">Curious to <span class="poppins text-violet-700 dark:text-violet-400">see</span> my work?</h3>
+      <h2 class="text-large sm:text-xl md:text-2xl text-balance select-none">A few of my creative endeavors.</h2>
+      <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance select-none">Curious to <span class="poppins text-violet-700 dark:text-violet-400">see</span> my work?</h3>
      </div>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
       <Step step={steps[0]} images={{dark: projectImagesDark[0], light: projectImagesLight[0]}}>
@@ -241,8 +241,8 @@
 
 <section id="about" class="pt-20 lg:pt-24 flex flex-col gap-10 sm:gap-12 md:gap-14 relative">
   <div class="flex flex-col gap-2 items-center justify-center text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-violet-500 dark:before:bg-violet-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-violet-500 dark:after:bg-violet-700 py-4">
-    <h2 class="text-large sm:text-xl md:text-2xl text-balance">Want to know more?</h2>
-    <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">A bit <span class="poppins text-violet-700 dark:text-violet-400">about</span> me.</h3>
+    <h2 class="text-large sm:text-xl md:text-2xl text-balance select-none">Want to know more?</h2>
+    <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance select-none">A bit <span class="poppins text-violet-700 dark:text-violet-400">about</span> me.</h3>
   </div>
   <div class="flex flex-col md:flex-row justify-center px-4 sm:px-6 md:px-8">
     <div class="w-full md:w-[800px] relative">
@@ -259,13 +259,13 @@
             </svg>
           </figure>
           <div class="flex flex-wrap gap-4 flex-row items-center justify-start text-xs md:text-sm section-title">
-            <span class="inline-block px-3 py-1 font-semibold poppins text-gray-950 dark:text-white bg-violet-500 dark:bg-violet-700 rounded-full shadow-md text-sm sm:text-base">
+            <span class="inline-block px-3 py-1 font-semibold poppins text-gray-950 dark:text-white bg-violet-500 dark:bg-violet-700 rounded-full shadow-md text-sm sm:text-base select-none">
              {benefit.year}
             </span>
-            <h4 class="text-2xl sm:text-3xl md:text-5xl font-semibold poppins text-gray-900 dark:text-white">
+            <h4 class="text-2xl sm:text-3xl md:text-5xl font-semibold poppins text-gray-900 dark:text-white select-none">
              {benefit.title}
             </h4>
-            <div class="my-1 text-sm poppins font-normal leading-none text-gray-700 dark:text-slate-400">
+            <div class="my-1 text-sm poppins font-normal leading-none text-gray-700 dark:text-slate-400 select-none">
              {benefit.duration}
             </div>
           </div>
@@ -281,8 +281,8 @@
 
 <section id="contact" class="py-20 lg:py-24 flex flex-col gap-10 sm:gap-12 md:gap-14">
   <div class="flex flex-col gap-2 items-center justify-center text-center">
-    <h2 class="text-large sm:text-xl md:text-2xl text-balance">Get in Touch</h2>
-    <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">Let's <span class="poppins text-violet-700 dark:text-violet-400">Connect</span></h3>
+    <h2 class="text-large sm:text-xl md:text-2xl text-balance select-none">Get in Touch</h2>
+    <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance select-none">Let's <span class="poppins text-violet-700 dark:text-violet-400">Connect</span></h3>
   </div>
 
   <div class="flex justify-center">
@@ -305,7 +305,7 @@
             <div class="absolute top-0 right-full w-full h-full bg-violet-500 dark:bg-violet-800 opacity-10  dark:opacity-20 group-hover/ContactBtn:translate-x-full z-[0] duration-200"></div>
             <h4 class="relative z-[1]">{submitted ? successMessage : loading ? 'Sending message' : 'Work With Me'}</h4>
         </button> -->
-        <button type="submit" aria-label="Work With Me" class:submitted class:loading class="font-medium text-base md:text-lg poppins relative overflow-hidden px-6 py-2 rounded-full bg-white dark:bg-gray-100 text-violet-700 dark:text-slate-900 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-200 duration-200 group/ContactBtn whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 border border-violet-400 dark:border-violet-700" tabindex={$isMenuOpen ? -1 : 0} disabled={loading}>
+        <button type="submit" aria-label="Work With Me" class:submitted class:loading class="font-medium text-base md:text-lg poppins relative overflow-hidden px-6 py-2 rounded-full bg-white dark:bg-gray-100 text-violet-700 dark:text-slate-900 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-200 duration-200 group/ContactBtn whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 border border-violet-400 dark:border-violet-700 select-none" tabindex={$isMenuOpen ? -1 : 0} disabled={loading}>
           <div class="absolute top-0 right-full w-full h-full bg-violet-400 dark:bg-violet-800 opacity-20 group-hover/ContactBtn:translate-x-full z-[0] duration-200"></div>
           <h4 class="relative z-[1]">{submitted ? successMessage : loading ? 'Sending message' : 'Work With Me'}</h4>
         </button>
