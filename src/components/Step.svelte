@@ -62,7 +62,6 @@
       <ul class="flex flex-wrap gap-2">
         {#each step.technologies.split(', ') as tag}
           <!-- <li class="bg-violet-600 dark:bg-violet-700 text-white px-3 py-1 rounded-full shadow-sm text-sm sm:text-base whitespace-nowrap">{tag}</li> -->
-          <!-- <li class="bg-violet-600 dark:bg-violet-700 text-white px-3 py-1 rounded-full shadow-sm text-sm sm:text-base whitespace-nowrap inline-block mr-2 mb-2">{tag}</li> -->
           <li class="bg-violet-600 dark:bg-violet-700 text-white px-3 py-1 rounded-full shadow-sm text-sm sm:text-base whitespace-nowrap opacity-80 hover:opacity-100 transition duration-200 ease-in-out select-none">{tag}</li>
         {/each}
       </ul>
@@ -82,16 +81,6 @@
       {/if}
     </button> -->
 
-    <!-- <button on:click={toggleShowMore} aria-label={showMore ? "Show Less" : "Read More"} class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-violet-500 text-slate-900 cursor-pointer hover:bg-violet-600 duration-200 group/expandBtn focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" tabindex={$isMenuOpen ? -1 : 0}>
-      <div class="absolute top-0 right-full w-full h-full bg-violet-200 dark:bg-gray-200 opacity-30 dark:opacity-20 group-hover/expandBtn:translate-x-full z-[0] duration-200"></div>
-      {#if showMore}
-        <span class="relative z-[1]">Show Less</span>
-        <span class="ml-1 relative z-[1]">&#8593;</span>
-      {:else}
-        <span class="relative z-[1]">Read More</span>
-        <span class="ml-1 relative z-[1]">&#8595;</span>
-      {/if}
-    </button> -->
     <button on:click={toggleShowMore} aria-label={showMore ? "Show Less" : "Read More"} class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-violet-500 text-slate-950 cursor-pointer hover:bg-violet-600 duration-200 group/expandBtn focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap border border-violet-400 dark:border-violet-700 select-none" tabindex={$isMenuOpen ? -1 : 0}>
       <div class="absolute top-0 right-full w-full h-full bg-violet-200 dark:bg-gray-200 opacity-30 dark:opacity-20 group-hover/expandBtn:translate-x-full z-[0] duration-200"></div>
       {#if showMore}
