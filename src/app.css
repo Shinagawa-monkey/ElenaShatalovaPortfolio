@@ -54,7 +54,7 @@ h3,
   font-family: "Poppins", sans-serif;
 }
 
-.blueShadow {
+.blueShadowDark {
   /* box-shadow: 0px 14px 55px rgba(109, 40, 217, 0.45); */
   /* box-shadow: 0px 14px 55px rgba(109, 40, 217, 0.55); */
   box-shadow: 0px 14px 55px rgba(109, 40, 217, 0.55);
@@ -75,11 +75,20 @@ h3,
 }
 
 .halGlow {
-  box-shadow: 0px 14px 55px rgba(13, 110, 253, 0.25);
+  box-shadow: 0px 7px 20px rgba(102, 170, 255, 0.3);
+
 }
 
 .hadGlow {
-  box-shadow: 0px 14px 55px rgba(26, 26, 26, 0.65);
+  box-shadow: 0px 7px 20px rgba(255, 255, 255, 0.2);
+}
+
+.glowL {
+  box-shadow: 0px 14px 55px rgba(13, 110, 253, 0.15);
+}
+
+.glowD {
+  box-shadow: 0px 14px 55px rgba(109, 40, 217, 0.65);
 }
 
 /* .blueShadowLight {
