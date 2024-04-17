@@ -37,7 +37,7 @@
   });
 </script>
 
-  <div style="height: {height}" class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-violet-600 dark:border-violet-700 text-center cursor-default group hover:border-violet-900 dark:hover:border-violet-400 duration-200 transition-height">
+  <div style="height: {height}" class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-violet-600 dark:border-violet-700 text-center cursor-default group hover:border-violet-800 dark:hover:border-violet-400 duration-200 transition-height">
     <!-- hover:drop-shadow-[0px_0px_0.5px_rgb(91,33,182)] dark:drop-shadow-none -->
   <div class="bg-blue-300 dark:bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200">
     <i class="{step.icon} select-none" />
