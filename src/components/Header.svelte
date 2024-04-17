@@ -126,31 +126,14 @@
       </li>
       
       <li>
-        <button on:click={toggleTheme} class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-slate-200 transition duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" aria-label={$theme === 'light' ? 'Switch to Dark Theme' : 'Switch to Light Theme'}>
-          {#if $theme === 'light'}
-            <img class="w-5 h-5 transition duration-300 ease-in-out" src="/images/moon-to-sun.svg" alt="Light Theme">
-          {:else}
-            <img class="w-5 h-5 transition duration-300 ease-in-out" src="/images/sun-to-moon.svg" alt="Dark Theme">
-          {/if}
-        </button>
-        <br>
-        <!-- <button on:click={toggleTheme} class="themeShadowLight dark:themeShadowDark w-9 h-9 flex items-center justify-center rounded-full bg-white dark:bg-gray-100 hover:bg-gray-50 dark:hover:bg-gray-200 transition duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" aria-label={$theme === 'light' ? 'Switch to Dark Theme' : 'Switch to Light Theme'}>
+        <!--  <button on:click={toggleTheme} class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-slate-200 transition duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" aria-label={$theme === 'light' ? 'Switch to Dark Theme' : 'Switch to Light Theme'}>
           {#if $theme === 'light'}
             <img class="w-5 h-5 transition duration-300 ease-in-out" src="/images/moon-to-sun.svg" alt="Light Theme">
           {:else}
             <img class="w-5 h-5 transition duration-300 ease-in-out" src="/images/sun-to-moon.svg" alt="Dark Theme">
           {/if}
         </button> -->
-        <button on:click={toggleTheme} class="themeShadowLight dark:themeShadowDark w-9 h-9 flex items-center justify-center rounded-full bg-white dark:bg-gray-100 hover:bg-gray-100 dark:hover:bg-gray-200 transition duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" aria-label={$theme === 'light' ? 'Switch to Dark Theme' : 'Switch to Light Theme'}>
-          {#if $theme === 'light'}
-            <img class="w-5 h-5 transition duration-300 ease-in-out" src="/images/moon-to-sun.svg" alt="Light Theme">
-          {:else}
-            <img class="w-5 h-5 transition duration-300 ease-in-out" src="/images/sun-to-moon.svg" alt="Dark Theme">
-          {/if}
-        </button>
-
-        <br>
-        <button on:click={toggleTheme} class="themeShadowLight dark:themeShadowDark w-9 h-9 flex items-center justify-center rounded-full bg-white dark:bg-gray-100 hover:bg-gray-100 dark:hover:bg-gray-300 transition duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" aria-label={$theme === 'light' ? 'Switch to Dark Theme' : 'Switch to Light Theme'}>
+        <button on:click={toggleTheme} class="w-9 h-9 flex items-center justify-center rounded-full bg-white dark:bg-gray-100 hover:bg-gray-100 dark:hover:bg-gray-300 transition duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" aria-label={$theme === 'light' ? 'Switch to Dark Theme' : 'Switch to Light Theme'}>
           {#if $theme === 'light'}
             <img class="w-5 h-5 transition duration-300 ease-in-out" src="/images/moon-to-sun.svg" alt="Light Theme">
           {:else}
@@ -213,7 +196,7 @@
       </li>
       
       <li>
-        <button on:click={toggleTheme} class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-slate-200 transition duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50">
+        <button on:click={toggleTheme} class="w-9 h-9 flex items-center justify-center rounded-full bg-white dark:bg-gray-100 hover:bg-gray-100 dark:hover:bg-gray-300 transition duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" aria-label={$theme === 'light' ? 'Switch to Dark Theme' : 'Switch to Light Theme'}>
           <!-- {#if themeLoaded} -->
           {#if $theme === 'light'}
             <img class="w-5 h-5 transition duration-300 ease-in-out" src="/images/moon-to-sun.svg" alt="Light Theme">
