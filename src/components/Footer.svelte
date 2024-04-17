@@ -104,7 +104,7 @@
           </a>
         </li>
         <li>
-          <a href="https://discord.com/users/shinagawaMonkey#9910" target="_blank" rel="noopener noreferrer" class="flex rounded-full overflow-hidden bg-white hover:bg-violet-400 dark:hover:bg-slate-400 p-2 transition-transform duration-300 ease-in-out transform hover:translate-y-[-2px] focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 select-none" aria-label="Discord" tabindex={$isMenuOpen ? -1 : 0}>
+          <a href="https://discord.com/users/shinagawaMonkey#9910" target="_blank" rel="noopener noreferrer" class="flex rounded-full overflow-hidden bg-white hover:bg-violet-400 dark:hover:bg-violet-500 p-2 transition-transform duration-300 ease-in-out transform hover:translate-y-[-2px] focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 select-none" aria-label="Discord" tabindex={$isMenuOpen ? -1 : 0}>
             <!-- Add accessible name for Discord -->
             <span class="sr-only">Discord</span>
             <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" alt="Discord Icon">
@@ -113,7 +113,7 @@
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/sudoCyberMonkey" target="_blank" rel="noopener noreferrer" class="flex rounded-full overflow-hidden bg-white hover:bg-violet-400 dark:hover:bg-slate-400 p-2 transition-transform duration-300 ease-in-out transform hover:translate-y-[-2px] focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 select-none" aria-label="Twitter" tabindex={$isMenuOpen ? -1 : 0}>
+          <a href="https://twitter.com/sudoCyberMonkey" target="_blank" rel="noopener noreferrer" class="flex rounded-full overflow-hidden bg-white hover:bg-violet-400 dark:hover:bg-violet-500 p-2 transition-transform duration-300 ease-in-out transform hover:translate-y-[-2px] focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 select-none" aria-label="Twitter" tabindex={$isMenuOpen ? -1 : 0}>
             <!-- Add accessible name for Twitter -->
             <span class="sr-only">Twitter</span>
             <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" alt="Twitter Icon">
