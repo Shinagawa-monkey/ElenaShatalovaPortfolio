@@ -167,14 +167,14 @@
     </button>
   </div>
   <!-- Mobile Menu -->
-  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-svh h-full m-h-screen opacity-[.91] dark:opacity-90 bg-blue-300 dark:bg-slate-950 md:hidden before:opacity-100 before:absolute before:h-10 before:w-screen before:inset-x-0 top-0 before:bg-blue-300  dark:before:bg-slate-950 after:opacity-100 after:absolute after:h-screen after:w-screen afetr:inset-x-0 bottom-0 after:bg-blue-300 dark:after:bg-slate-950">
+  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-svh h-full m-h-screen opacity-90 bg-blue-300 dark:bg-slate-950 md:hidden before:opacity-100 before:absolute before:h-10 before:w-screen before:inset-x-0 top-0 before:bg-blue-300  dark:before:bg-slate-950 after:opacity-100 after:absolute after:h-screen after:w-screen afetr:inset-x-0 bottom-0 after:bg-blue-300 dark:after:bg-slate-950">
     <!-- <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full h-full m-h-screen opacity-90 bg-slate-950 md:hidden"> -->
     <ul class="flex-col items-center px-4 py-1 pt-24 pb-4 tracking-widest text-gray-900 dark:text-white uppercase divide-y divide-gray-800 dark:divide-gray-300">
       {#if !$page.error && $page.url.pathname === '/'}
         {#each tabs as tab, index}
           <li>
             <div class="w-full py-3 text-center">
-              <a href={tab.link} class="block duration-200 hover:text-violet-600 dark:hover:text-violet-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" target={index === 3 ? "_blank" : ""}>
+              <a href={tab.link} class="block duration-200 hover:text-violet-600 dark:hover:text-violet-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap text-gray-950 dark:text-white" target={index === 3 ? "_blank" : ""}>
                 <span>{tab.name}</span>
               </a>
             </div>
