@@ -167,7 +167,7 @@
     </button>
   </div>
   <!-- Mobile Menu -->
-  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-svh h-full m-h-screen opacity-90 bg-blue-300 dark:bg-slate-950 md:hidden before:opacity-100 before:absolute before:h-10 before:w-screen before:inset-x-0 top-0 before:bg-blue-300  dark:before:bg-slate-950 after:opacity-100 after:absolute after:h-screen after:w-screen afetr:inset-x-0 bottom-0 after:bg-blue-300 dark:after:bg-slate-950">
+  <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-svh h-full m-h-screen opacity-[.91] dark:opacity-90 bg-blue-300 dark:bg-slate-950 md:hidden before:opacity-100 before:absolute before:h-10 before:w-screen before:inset-x-0 top-0 before:bg-blue-300  dark:before:bg-slate-950 after:opacity-100 after:absolute after:h-screen after:w-screen afetr:inset-x-0 bottom-0 after:bg-blue-300 dark:after:bg-slate-950">
     <!-- <div bind:this={menu} class:flex={!isHidden} class:hidden={!isFlex} id="menu" class="fixed inset-0 z-[2] hidden self-end w-full h-full m-h-screen opacity-90 bg-slate-950 md:hidden"> -->
     <ul class="flex-col items-center px-4 py-1 pt-24 pb-4 tracking-widest text-gray-900 dark:text-white uppercase divide-y divide-gray-800 dark:divide-gray-300">
       {#if !$page.error && $page.url.pathname === '/'}
