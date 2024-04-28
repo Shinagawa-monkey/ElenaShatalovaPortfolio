@@ -13,6 +13,8 @@
   // import { theme } from '$lib/theme';
   //import { page } from "$app/stores";
   import { enhance } from "$app/forms";
+  import { Canvas } from '@threlte/core'
+  import Scene from './Scene.svelte'
 
   export let form;
   let submitted = false;
@@ -171,7 +173,10 @@
 
   <div class="relative shadow-2xl grid place-items-center">
     <!-- svelte-ignore a11y-img-redundant-alt -->
-    <img src={"/images/profile.png"} alt="Profile Image" class="object-cover z-[1] max-h-[70vh]" loading="lazy" />
+    <!-- <img src={"/images/profile.png"} alt="Profile Image" class="object-cover z-[1] max-h-[70vh]" loading="lazy" /> -->
+    <Canvas>
+      <Scene /> 
+    </Canvas>
   </div>
   </section>
   
