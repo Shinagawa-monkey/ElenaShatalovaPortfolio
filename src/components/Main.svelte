@@ -172,11 +172,11 @@
   </div>
 
   <!-- <div class="relative shadow-2xl grid place-items-center"> -->
-  <div class="flex flex-col">
+  <div class="flex flex-col w-full h-full">
     <!-- svelte-ignore a11y-img-redundant-alt -->
     <!-- <img src={"/images/profile.png"} alt="Profile Image" class="object-cover z-[1] max-h-[70vh]" loading="lazy" /> -->
     <!-- <Canvas class="w-full max-w-full h-auto"> -->
-    <Canvas>
+    <Canvas class="w-full h-auto">
       <Scene/> 
     </Canvas>
   </div>
