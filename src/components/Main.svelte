@@ -176,7 +176,7 @@
     <!-- svelte-ignore a11y-img-redundant-alt -->
     <!-- <img src={"/images/profile.png"} alt="Profile Image" class="object-cover z-[1] max-h-[70vh]" loading="lazy" /> -->
     <!-- <Canvas class="w-full max-w-full h-auto"> -->
-    <Canvas>
+    <Canvas class="w-screen-lg h-auto">
       <Scene /> 
     </Canvas>
   </div>

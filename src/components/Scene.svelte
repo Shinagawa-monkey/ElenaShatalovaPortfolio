@@ -45,7 +45,7 @@
 
 <T.Group rotation={[rotationX, rotationY, 0]}>
   <T.Mesh rotation.y={rotationMesh}>
-    <T.SphereGeometry args={[15, 150, 150]} />
+    <T.SphereGeometry args={[8, 80, 80]} />
     {#await texture then value}
       <T.ShaderMaterial fragmentShader={fragmentShader} vertexShader={vertexShader} uniforms={{ globeTexture: { value } }} />
     {/await}
@@ -53,7 +53,7 @@
 </T.Group>
 
 <T.Mesh scale={[1.1, 1.1, 1.1]}>
-  <T.SphereGeometry args={[15, 150, 150]} />
+  <T.SphereGeometry args={[8, 80, 80]} class="sm:args={[10, 100, 100]}" />
   {#await texture then value}
     <T.ShaderMaterial fragmentShader={atmosphereFragmentShader} vertexShader={atmosphereVertexShader} side={BackSide} blending={AdditiveBlending} />
   {/await}
