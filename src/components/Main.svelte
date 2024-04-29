@@ -175,7 +175,7 @@
   <div class="relative grid place-items-center">
     <!-- svelte-ignore a11y-img-redundant-alt -->
     <!-- <img src={"/images/profile.png"} alt="Profile Image" class="object-cover z-[1] max-h-[70vh]" loading="lazy" /> -->
-    <Canvas antialias class="f-full h-full absolute top-0 left-0">
+    <Canvas antialias class="w-full max-w-[50] max-h-[50]">
       <Scene /> 
     </Canvas>
   </div>
