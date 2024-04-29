@@ -41,7 +41,7 @@
     });
 </script>
 
-<T.PerspectiveCamera makeDefault fov={75} position={[0, 0, 15]}  far={1000} near={0.1} />
+<T.PerspectiveCamera makeDefault fov={75} position={[0, 0, 15]} class="sm:position={[0, 0, 25]}"  far={1000} near={0.1} />
 
 <T.Group rotation={[rotationX, rotationY, 0]}>
   <T.Mesh rotation.y={rotationMesh}>
