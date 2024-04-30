@@ -172,11 +172,11 @@
   </div>
 
   <!-- <div class="relative shadow-2xl grid place-items-center"> -->
-  <div class="flex flex-col w-full h-full">
+  <div class="flex flex-col flex-1">
     <!-- svelte-ignore a11y-img-redundant-alt -->
     <!-- <img src={"/images/profile.png"} alt="Profile Image" class="object-cover z-[1] max-h-[70vh]" loading="lazy" /> -->
     <!-- <Canvas class="w-full max-w-full h-auto"> -->
-    <div class="relative grid place-content-center h-96 md:h-full">
+    <div class="canvasWrapper relative grid place-content-center h-96 sm:h-full md:h-full lg:h-96 xl:h-full">
       <Canvas>
         <Scene /> 
       </Canvas>
@@ -316,6 +316,21 @@
 </section>
 
 </main>
+
+<style>
+    @media (max-width: 359px) {
+    .canvasWrapper {
+      height: 20rem;
+      /* height: 320px; */
+    }
+   }
+   @media (360px <= width <= 411px) {
+    .canvasWrapper {
+      height: 21rem;
+      /* height: 336px;  */
+    }
+   }
+</style>
 
 <!-- <style>
   Mars: #D45500, #B87333

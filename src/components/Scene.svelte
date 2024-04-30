@@ -55,7 +55,7 @@
 </T.Group>
 
 <T.Mesh scale={[1.1, 1.1, 1.1]}>
-  <T.SphereGeometry args={[7.5, 75, 75]} />
+  <T.SphereGeometry args={[7.5, 75, 756]} />
   {#await texture then value}
     <T.ShaderMaterial fragmentShader={atmosphereFragmentShader} vertexShader={atmosphereVertexShader} side={BackSide} blending={AdditiveBlending} />
   {/await}
