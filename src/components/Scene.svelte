@@ -41,11 +41,13 @@
     });
 </script>
 
-<T.PerspectiveCamera makeDefault fov={75} position={[0, 0, 15]}  far={1000} near={0.1} />
+<T.PerspectiveCamera makeDefault fov={75} position={[0, 0, 15]} far={1000} near={0.1} on:create={({ ref }) => {
+  ref.lookAt(0, 0, 0)
+}} />
 
 <T.Group rotation={[rotationX, rotationY, 0]}>
   <T.Mesh rotation.y={rotationMesh}>
-    <T.SphereGeometry args={[8, 80, 80]} />
+    <T.SphereGeometry args={[7.5, 75, 75]} />
     {#await texture then value}
       <T.ShaderMaterial fragmentShader={fragmentShader} vertexShader={vertexShader} uniforms={{ globeTexture: { value } }} />
     {/await}
@@ -53,7 +55,7 @@
 </T.Group>
 
 <T.Mesh scale={[1.1, 1.1, 1.1]}>
-  <T.SphereGeometry args={[8, 80, 80]} />
+  <T.SphereGeometry args={[7.5, 75, 75]} />
   {#await texture then value}
     <T.ShaderMaterial fragmentShader={atmosphereFragmentShader} vertexShader={atmosphereVertexShader} side={BackSide} blending={AdditiveBlending} />
   {/await}

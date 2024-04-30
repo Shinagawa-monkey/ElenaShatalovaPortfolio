@@ -176,9 +176,11 @@
     <!-- svelte-ignore a11y-img-redundant-alt -->
     <!-- <img src={"/images/profile.png"} alt="Profile Image" class="object-cover z-[1] max-h-[70vh]" loading="lazy" /> -->
     <!-- <Canvas class="w-full max-w-full h-auto"> -->
-    <Canvas class="h-full flex-grow">
-      <Scene/> 
-    </Canvas>
+    <div class="grid place-content-center h-96">
+      <Canvas>
+        <Scene /> 
+      </Canvas>
+    </div>
   </div>
   </section>
   
