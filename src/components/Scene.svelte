@@ -4,16 +4,19 @@
   import { TextureLoader, AdditiveBlending, BackSide } from 'three';
   import { useLoader } from '@threlte/core';
   import { interactivity } from '@threlte/extras';
+  import { theme } from '$lib/theme';
 
   // Import shader code as strings using Vite's ?raw query
   import fragmentShader from './fragment.glsl?raw';
   import vertexShader from './vertex.glsl?raw';
-  import atmosphereFragmentShader from './atmosphereFragment.glsl?raw';
+  import atmosphereFragmentShaderLight from './atmosphereFragmentLight.glsl?raw';
+  import atmosphereFragmentShaderDark from './atmosphereFragmentDark.glsl?raw';
   import atmosphereVertexShader from './atmosphereVertex.glsl?raw';
 
   interactivity();
 
   const texture = useLoader(TextureLoader).load('/images/globe.jpg');
+  let atmosphereFragmentShader = $theme === 'light' ? atmosphereFragmentShaderLight : atmosphereFragmentShaderDark
 
   let cursorPosition = { x: 0, y: 0 };
   let rotationX = 0;
@@ -39,6 +42,12 @@
   onDestroy(() => {
       window.removeEventListener('mousemove', handleMouseMove);
     });
+
+    $: {
+    atmosphereFragmentShader = $theme === 'light' ? atmosphereFragmentShaderLight : atmosphereFragmentShaderDark;
+    // console.log('Current Theme:', $theme);
+    // console.log('Selected Fragment Shader:', atmosphereFragmentShader);
+  }
 </script>
 
 <T.PerspectiveCamera makeDefault fov={75} position={[0, 0, 15]} far={1000} near={0.1} on:create={({ ref }) => {
