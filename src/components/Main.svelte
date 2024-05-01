@@ -318,13 +318,13 @@
 </main>
 
 <style>
-    @media (320px <= width <= 359px) {
+    @media (341px <= width <= 359px) {
     .canvasWrapper {
       height: 20rem;
       /* height: 320px; */
     }
    }
-   @media (max-width: 319px) {
+   @media (max-width: 340px) {
     .canvasWrapper {
       height: 5rem;
       /* height: 320px; */
