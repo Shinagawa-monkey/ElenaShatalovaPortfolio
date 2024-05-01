@@ -320,8 +320,13 @@
 <style>
     @media (max-width: 359px) {
     .canvasWrapper {
-      height: 19rem;
+      height: 20rem;
       /* height: 320px; */
+    }
+   }
+   @media (0 <= width <= 320) {
+    main {
+      background-color: aqua;
     }
    }
    @media (360px <= width <= 411px) {
