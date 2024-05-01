@@ -320,7 +320,7 @@
 <style>
     @media (max-width: 359px) {
     .canvasWrapper {
-      height: 5rem;
+      height: 20rem;
       /* height: 320px; */
     }
    }
