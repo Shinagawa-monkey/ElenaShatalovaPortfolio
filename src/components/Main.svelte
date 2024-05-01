@@ -324,7 +324,7 @@
       /* height: 320px; */
     }
    }
-   @media (0 <= width <= 340) {
+   @media (0 <= width <= 350) {
     main {
       background-color: aqua;
     }
