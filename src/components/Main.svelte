@@ -176,7 +176,7 @@
     <!-- svelte-ignore a11y-img-redundant-alt -->
     <!-- <img src={"/images/profile.png"} alt="Profile Image" class="object-cover z-[1] max-h-[70vh]" loading="lazy" /> -->
     <!-- <Canvas class="w-full max-w-full h-auto"> -->
-    <div class="canvasWrapper relative grid place-content-center h-96 sm:h-full md:h-full lg:h-96 xl:h-full w-full px-9">
+    <div class="canvasWrapper relative grid place-content-center h-96 sm:h-full md:h-full lg:h-96 xl:h-full">
       <Canvas>
         <Scene /> 
       </Canvas>
