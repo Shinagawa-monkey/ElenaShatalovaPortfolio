@@ -93,23 +93,28 @@
     rotationMesh += delta * 0.01;
   });
 
-  onMount(() => {
-    const handleMouseMove = (event) => {
-      cursorPosition.x = event.clientX;
-      cursorPosition.y = event.clientY;
-    };
+  const handleMouseMove = (event) => {
+    cursorPosition.x = event.clientX;
+    cursorPosition.y = event.clientY;
+  };
 
+  onMount(() => {
     window.addEventListener('mousemove', handleMouseMove);
   });
   onDestroy(() => {
       window.removeEventListener('mousemove', handleMouseMove);
-    });
+  });
 
-    $: {
+  $: {
     atmosphereFragmentShader = $theme === 'light' ? atmosphereFragmentShaderLight : atmosphereFragmentShaderDark;
     // console.log('Current Theme:', $theme);
     // console.log('Selected Fragment Shader:', atmosphereFragmentShader);
   }
+
+  // $: {
+  //   cursorPosition.x += handleMouseMove();
+  //   cursorPosition.y += handleMouseMove();
+  // }
 </script>
 
 <T.PerspectiveCamera makeDefault fov={75} position={[0, 0, 15]} far={1000} near={0.1} on:create={({ ref }) => {
