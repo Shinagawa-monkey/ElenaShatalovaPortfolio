@@ -2,6 +2,7 @@
   import { onMount, onDestroy  } from 'svelte';
   import { isMenuOpen } from '$lib/menuStore';
   import { theme } from '$lib/theme';
+  import { optimize } from '$lib/image';
 
   export let step;
   export let images;
@@ -48,7 +49,7 @@
     <div class="swiper-wrapper">
       {#each images[currentTheme] as image, index}
         <div class="swiper-slide">
-          <img src={image} alt={`Project Image ${index + 1}`} class="object-cover w-full h-full" loading="lazy" />
+          <img srcset={optimize({image})} alt={`Project Image ${index + 1}`} class="object-cover w-full h-full" />
         </div>
       {/each}
     </div>
