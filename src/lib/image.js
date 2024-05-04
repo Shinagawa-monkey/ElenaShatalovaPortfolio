@@ -19,7 +19,7 @@ export function optimize(src, widths = [640, 960, 1280], quality = 90) {
   
     return widths
       .map(width => {
-        const url = `/_vercel/image/projectImages?url=${encodeURIComponent(src)}&w=${width}&q=${quality}`;
+        const url = `/_vercel/static/images/projectImages/image?url=${encodeURIComponent(src)}&w=${width}&q=${quality}`;
         return `${url} ${width}w`;
       })
       .join(', ');
