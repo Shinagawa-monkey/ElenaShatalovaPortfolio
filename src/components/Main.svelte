@@ -76,8 +76,8 @@
     },
   ];
 
-  // Function to initialize Swiper
-  const swiper = new Swiper('.swiper', {
+    // init Swiper:
+    const swiper = new Swiper('.swiper', {
       grabCursor: true,
       effect: 'creative',
       creativeEffect: {
@@ -94,11 +94,11 @@
     });
 
   // Call initSwiper when the component is mounted
-  onMount(initSwiper);
+  // onMount(initSwiper);
   // Reinitialize Swiper after each update
-  afterUpdate(initSwiper);
+  // afterUpdate(initSwiper);
   // Destroy Swiper when the component is destroyed
-  onDestroy(destroySwiper);
+  // onDestroy(destroySwiper);
 </script>
 
 <main class="flex flex-col flex-1 p-4">
