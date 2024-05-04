@@ -76,8 +76,12 @@
     },
   ];
 
-    // init Swiper:
-    const swiper = new Swiper('.swiper', {
+  // Define a variable to hold the Swiper instance
+  let swiperInstance;
+
+  // Function to initialize Swiper
+  function initSwiper() {
+    swiperInstance = new Swiper('.swiper', {
       grabCursor: true,
       effect: 'creative',
       creativeEffect: {
@@ -92,13 +96,21 @@
       loop: true,
       autoHeight: true
     });
+  }
+
+  // Function to destroy Swiper instance
+  function destroySwiper() {
+    if (swiperInstance && swiperInstance.destroy) {
+      swiperInstance.destroy();
+    }
+  }
 
   // Call initSwiper when the component is mounted
-  // onMount(initSwiper);
+  onMount(initSwiper);
   // Reinitialize Swiper after each update
-  // afterUpdate(initSwiper);
+  afterUpdate(initSwiper);
   // Destroy Swiper when the component is destroyed
-  // onDestroy(destroySwiper);
+  onDestroy(destroySwiper);
 </script>
 
 <main class="flex flex-col flex-1 p-4">
