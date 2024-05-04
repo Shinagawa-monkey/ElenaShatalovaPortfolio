@@ -21,7 +21,7 @@ export function optimize(src, widths = [640, 960, 1280], quality = 90) {
       .slice()
       .sort((a, b) => a - b)
       .map((width, i) => {
-        const url = `/images/_vercel/image?url=${encodeURIComponent(src)}&w=${width}&q=${quality}`;
+        const url = `/images/projectImages/image?url=${encodeURIComponent(src)}&w=${width}&q=${quality}`;
         const descriptor = i < widths.length - 1 ? `${width}w` : '';
         return `${url} ${descriptor}`;
       })
