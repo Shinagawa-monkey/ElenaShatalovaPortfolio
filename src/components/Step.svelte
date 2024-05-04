@@ -50,7 +50,7 @@
       {#each images[currentTheme] as image, index}
         <div class="swiper-slide">
           <!-- <img src={image} alt={`Project Image ${index + 1}`} class="object-cover w-full h-full" loading="lazy" /> -->
-          <img src={optimize(image)} alt={`Project Image ${index + 1}`} class="object-cover w-full h-full" />
+          <img srcset={optimize(image.url)} alt={`Project Image ${index + 1}`} class="object-cover w-full h-full"/>
         </div>
       {/each}
     </div>
