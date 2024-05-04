@@ -85,6 +85,10 @@
   function initSwiper() {
     swiperInstance = new Swiper('.swiper', {
       modules: [Pagination],
+      // If we need pagination
+      pagination: {
+      el: '.swiper-pagination',
+      },
       grabCursor: true,
       effect: 'creative',
       creativeEffect: {
