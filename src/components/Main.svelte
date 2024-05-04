@@ -1,6 +1,8 @@
 <script>
   import Step from "../components/Step.svelte"
   import { onMount, afterUpdate, onDestroy } from 'svelte';
+  import Swiper from 'swiper';
+  import 'swiper/css';
   import { isMenuOpen } from '$lib/menuStore';
   import { enhance } from "$app/forms";
   import { Canvas } from '@threlte/core'
