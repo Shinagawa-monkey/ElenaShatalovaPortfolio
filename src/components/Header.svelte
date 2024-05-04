@@ -81,7 +81,7 @@
         {#if !$page.error && $page.url.pathname === '/'}
           {#each tabs as tab, index}
             <li>
-              <a href={tab.link} class="tracking-widest duration-200 hover:text-violet-700 dark:hover:text-violet-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" target={index === 3 ? "_blank" : ""} >
+              <a data-sveltekit-preload-data="tap" href={tab.link} class="tracking-widest duration-200 hover:text-violet-700 dark:hover:text-violet-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap" target={index === 3 ? "_blank" : ""} >
                 <span>{tab.name}</span>
               </a>
             </li>
@@ -127,7 +127,7 @@
         {#each tabs as tab, index}
           <li>
             <div class="w-full py-3 text-center">
-              <a href={tab.link} class="block duration-200 hover:text-violet-600 dark:hover:text-violet-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap text-gray-950 dark:text-white" target={index === 3 ? "_blank" : ""}>
+              <a data-sveltekit-preload-data="tap" href={tab.link} class="block duration-200 hover:text-violet-600 dark:hover:text-violet-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap text-gray-950 dark:text-white" target={index === 3 ? "_blank" : ""}>
                 <span>{tab.name}</span>
               </a>
             </div>
