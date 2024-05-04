@@ -5,7 +5,6 @@
   import { useLoader } from '@threlte/core';
   import { interactivity } from '@threlte/extras';
   import { theme } from '$lib/theme';
-  import { optimizeTexture } from '$lib/image'; 
 
   // Import shader code as strings using Vite's ?raw query
   import fragmentShader from './fragment.glsl?raw';
@@ -16,8 +15,7 @@
 
   interactivity();
 
-  // const texture = useLoader(TextureLoader).load('/images/globe.jpg');
-  const texture = optimizeTexture('/images/globe.jpg');
+  const texture = useLoader(TextureLoader).load('/images/globe.jpg');
   let atmosphereFragmentShader = $theme === 'light' ? atmosphereFragmentShaderLight : atmosphereFragmentShaderDark
 
   let cursorPosition = { x: 0, y: 0 };
