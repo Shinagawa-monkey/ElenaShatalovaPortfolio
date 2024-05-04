@@ -263,6 +263,11 @@
 
 // // Run the function periodically (e.g., every hour)
 // setInterval(checkFormSubmissions, 3600000); // 1 hour
+export const config = {
+    isr: {
+      expiration: 60,
+    },
+  };
 
 import { fail } from '@sveltejs/kit';
 import { transporter } from '$lib/emailSetup.server.js';
