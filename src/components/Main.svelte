@@ -2,9 +2,7 @@
   import Step from "../components/Step.svelte"
   import { onMount, afterUpdate, onDestroy } from 'svelte';
   import Swiper from 'swiper';
-  import { Pagination } from 'swiper/modules';
   import 'swiper/css';
-  import 'swiper/css/pagination';
   import { isMenuOpen } from '$lib/menuStore';
   import { enhance } from "$app/forms";
   import { Canvas } from '@threlte/core'
@@ -84,11 +82,6 @@
   // Function to initialize Swiper
   function initSwiper() {
     swiperInstance = new Swiper('.swiper', {
-      modules: [Pagination],
-      // If we need pagination
-      pagination: {
-      el: '.swiper-pagination',
-      },
       grabCursor: true,
       effect: 'creative',
       creativeEffect: {
