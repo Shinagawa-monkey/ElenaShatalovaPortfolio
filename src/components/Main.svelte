@@ -1,17 +1,7 @@
 <script>
-  // https://scottspence.com/posts/contact-form-send-email-from-site
-  // https://www.loganwilliams.tech/posts/first-post
-
-  // https://svelte.dev/examples/svg-transitions
-  // https://learn.svelte.dev/tutorial/dimensions
-
-  //Vershion short code: 78.5 desktop 45.7 mobile
-
   import Step from "../components/Step.svelte"
   import { onMount, afterUpdate, onDestroy } from 'svelte';
   import { isMenuOpen } from '$lib/menuStore';
-  // import { theme } from '$lib/theme';
-  //import { page } from "$app/stores";
   import { enhance } from "$app/forms";
   import { Canvas } from '@threlte/core'
   import Scene from './Scene.svelte'
@@ -22,26 +12,16 @@
   let successMessage = "";
 
   const handleSubmit = async (event) => {
-    // event.preventDefault();
-
     // Set loading to true to display "Sending message..." text
     loading = true;
-
     // Simulate form submission delay (you should replace this with your actual form submission logic)
     await new Promise(resolve => setTimeout(resolve, 2000));
-
     // Set loading back to false after delay
     loading = false;
-
     // Set submitted to true to display success message
     submitted = true;
-    
-    // Set success message immediately
+        // Set success message immediately
     successMessage = "Thank you ✨";
-
-    // Reset form after submission
-    // event.target.reset();
-
     // Clear success message after some time
     setTimeout(() => {
       // Revert the button text to "Work With Me"
@@ -94,13 +74,6 @@
     },
   ];
 
-  // let currentTheme;
-  // theme.subscribe(value => currentTheme = value);
-
-  // const handleSubmit = () => {
-
-  // }
-
   // Define a variable to hold the Swiper instance
   let swiperInstance;
 
@@ -132,10 +105,8 @@
 
   // Call initSwiper when the component is mounted
   onMount(initSwiper);
-
   // Reinitialize Swiper after each update
   afterUpdate(initSwiper);
-
   // Destroy Swiper when the component is destroyed
   onDestroy(destroySwiper);
 </script>
@@ -161,21 +132,13 @@
       <span class="text-violet-700 dark:text-violet-400">Firebase</span>, or 
       <span class="text-violet-700 dark:text-violet-400">Firestore</span>. Let's turn ideas into innovation!
     </p>
-    <!-- <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" class="font-medium blueShadowLight dark:blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-violet-700 dark:text-slate-950 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap select-none" tabindex={$isMenuOpen ? -1 : 0} aria-label="LinkedIn Profile">
-      <div class="absolute top-0 right-full w-full h-full bg-violet-600 dark:bg-violet-400 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
-        <span class="relative z-[1]">Get in touch &rarr;</span>
-    </a> -->
     <a href="https://www.linkedin.com/in/elena-shatalova/" target="_blank" class="font-medium blueShadowLight dark:blueShadowDark mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white dark:bg-gray-100 text-violet-700 dark:text-slate-900 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-200 duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 whitespace-nowrap select-none" tabindex={$isMenuOpen ? -1 : 0} aria-label="LinkedIn Profile">
       <div class="absolute top-0 right-full w-full h-full bg-violet-400 dark:bg-violet-800 opacity-20 group-hover:translate-x-full z-[0] duration-200"></div>
         <span class="relative z-[1]">Get in touch &rarr;</span>
     </a>
   </div>
 
-  <!-- <div class="relative shadow-2xl grid place-items-center"> -->
   <div class="flex flex-col flex-1">
-    <!-- svelte-ignore a11y-img-redundant-alt -->
-    <!-- <img src={"/images/profile.png"} alt="Profile Image" class="object-cover z-[1] max-h-[70vh]" loading="lazy" /> -->
-    <!-- <Canvas class="w-full max-w-full h-auto"> -->
     <div class="canvasWrapper relative grid place-content-center h-96 sm:h-full md:h-full lg:h-96 xl:h-full">
       <Canvas>
         <Scene /> 
@@ -204,39 +167,6 @@
       </Step>
     </div>
   </section>
-
-<!-- MY MAIN VERSION HERE ============>    <section id="about" class="py-20 lg:py-24 flex flex-col gap-10 sm:gap-12 md:gap-14 relative">
-  <div class="flex flex-col gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-violet-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-violet-700 py-4">
-    <h2 class="text-large sm:text-xl md:text-2xl text-balance">Want to know more?</h2>
-    <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl text-balance">A bit <span class="poppins text-violet-400">about</span> me.</h3>
-  </div>
-  <div class="flex flex-col md:flex-row justify-center">
-    <div class="w-full md:w-[800px]">
-      <ol class="relative border-l border-slate-700">
-        {#each benefits as benefit}
-        //<li class="mb-10 ml-4 last:mb-0 scroll-reveal">
-        <li class="mb-10 ml-4 last:mb-0">
-          <div class="absolute w-3 h-3 bg-slate-700 rounded-full mt-2.5 sm:mt-3 md:mt-5 lg:mt-4.5 -left-1.5 border border border-slate-900 exclude-from-styling"></div>
-          <div class="flex flex-wrap gap-4 flex-row items-center justify-start text-xs md:text-sm section-title">
-            <span class="inline-block px-3 py-1 font-semibold poppins text-white bg-violet-700 rounded-full shadow-md text-sm sm:text-base">
-             {benefit.year}
-            </span>
-            <h4 class="text-2xl sm:text-3xl md:text-5xl font-semibold poppins text-white">
-             {benefit.title}
-            </h4>
-            <div class="my-1 text-sm poppins font-normal leading-none text-slate-400">
-             {benefit.duration}
-            </div>
-          </div>
-          <p class="mt-2 text-base sm:text-lg md:text-xl text-slate-300 text-pretty">
-            {benefit.details}
-          </p>
-        </li>
-        {/each}
-      </ol>
-    </div>
-  </div>
-</section> -->
 
 <section id="about" class="pt-20 lg:pt-24 flex flex-col gap-10 sm:gap-12 md:gap-14 relative">
   <div class="flex flex-col gap-2 items-center justify-center text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-violet-500 dark:before:bg-violet-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-violet-500 dark:after:bg-violet-700 py-4">
@@ -300,10 +230,6 @@
       <textarea id="message" name="message" value={form?.contact?.message?.value ?? ''} placeholder="Message" aria-label="Message" rows="6" class="placeholder-gray-700 dark:placeholder-slate-400 poppins mb-5 p-2 bg-transparent border border-solid border-violet-600 dark:border-violet-700 rounded-lg group hover:border-violet-800 dark:hover:border-violet-400 duration-200 transition-height focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0}></textarea>
   
       <div class="flex justify-start">
-        <!-- <button type="submit" aria-label="Work With Me" class:submitted class:loading class="font-medium text-base md:text-lg poppins relative overflow-hidden px-3 py-1.5 rounded-full bg-violet-600 dark:bg-gray-100 text-white  dark:text-slate-950 cursor-pointer hover:bg-violet-700 dark:hover:bg-gray-200 duration-200 group/ContactBtn whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-600 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50" tabindex={$isMenuOpen ? -1 : 0} disabled={loading}>
-            <div class="absolute top-0 right-full w-full h-full bg-violet-500 dark:bg-violet-800 opacity-10  dark:opacity-20 group-hover/ContactBtn:translate-x-full z-[0] duration-200"></div>
-            <h4 class="relative z-[1]">{submitted ? successMessage : loading ? 'Sending message' : 'Work With Me'}</h4>
-        </button> -->
         <button type="submit" aria-label="Work With Me" class:submitted class:loading class="font-medium text-base md:text-lg poppins relative overflow-hidden px-6 py-2 rounded-full bg-white dark:bg-gray-100 text-violet-700 dark:text-slate-900 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-200 duration-200 group/ContactBtn whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700 dark:focus-visible:ring-violet-400 focus-visible:ring-opacity-50 border border-violet-400 dark:border-violet-700 select-none" tabindex={$isMenuOpen ? -1 : 0} disabled={loading}>
           <div class="absolute top-0 right-full w-full h-full bg-violet-400 dark:bg-violet-800 opacity-20 group-hover/ContactBtn:translate-x-full z-[0] duration-200"></div>
           <h4 class="relative z-[1]">{submitted ? successMessage : loading ? 'Sending message' : 'Work With Me'}</h4>
@@ -331,47 +257,3 @@
     }
    }
 </style>
-
-<!-- <style>
-  Mars: #D45500, #B87333
-
-  light theme:
-  bg-sky-200 - #B0E2FF;
-
-  Text Contrast Color:
-  text-navy-900 - dark blue (#002366) / text-navy-800 - navy blue (#001F4D)
-  Design Element Contrast Color:
-  text-royal-blue-500 - royal blue (#4169E1) / text-midnight-blue-800 - midnight blue (#191970)
-
-
-  .scroll-reveal > :not(.exclude-from-styling),
-  .scroll-reveal > .section-title > :not(.exclude-from-styling) {
-    color: hsl(0 0% 100% / 0.2);
-    background-clip: text;
-    background-repeat: no-repeat;
-    background-size: 0% 100%;
-    background-image: linear-gradient(90deg, white, white);
-    animation: scroll-reveal linear forwards;
-    animation-timeline: view(y);
-    animation-range-start: cover 20vh;
-    animation-range-end: cover 30vh;
-  }
-
-  .scroll-reveal > p {
-    animation-range-start: cover 22.5vh;
-    animation-range-end: cover 50vh;
-  }
-
-  @keyframes scroll-reveal {
-    to {
-      background-size: 100% 100%;
-    }
-  }
-
-  /* Custom CSS to change placeholder opacity on focus */
-  input:focus::placeholder,
-  textarea:focus::placeholder {
-    opacity: 0.75; /* Adjust opacity as needed */
-    transition: opacity 0.3s ease-in-out; /* Smooth transition */
-  }
-</style> -->
