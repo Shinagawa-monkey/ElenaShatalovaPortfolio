@@ -18,9 +18,12 @@ export function optimize(src, widths = [640, 960, 1280], quality = 90) {
     if (dev) return src;
   
     return widths
-      .map(width => {
-        const url = `/images/projectImages/_vercel/image?url=${encodeURIComponent(src)}&w=${width}&q=${quality}`;
-        return `${url} ${width}w`;
+      .slice()
+      .sort((a, b) => a - b)
+      .map((width, i) => {
+        const url = `/images/_vercel/image?url=${encodeURIComponent(src)}&w=${width}&q=${quality}`;
+        const descriptor = i < widths.length - 1 ? `${width}w` : '';
+        return `${url} ${descriptor}`;
       })
       .join(', ');
   }
