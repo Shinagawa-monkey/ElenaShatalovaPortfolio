@@ -10,7 +10,7 @@ const config = {
 				formats: ['image/avif', 'image/webp'],
 				minimumCacheTTL: 300,
         placeholder: 'blur', 
-				domains: ['https://elena-shatalova-portfolio.vercel.app'],
+				domains: ['https://elena-shatalova-portfolio.vercel.app/images/projectImages'],
 			}
 		}),
   },
