@@ -9,8 +9,8 @@ const config = {
 				sizes: [640, 828, 1200, 1920, 3840],
 				formats: ['image/avif', 'image/webp'],
 				minimumCacheTTL: 300,
-        placeholder: 'blur', 
-				domains: ['https://elena-shatalova-portfolio.vercel.app/images/projectImages'],
+        // placeholder: 'blur', 
+				// domains: ['https://elena-shatalova-portfolio.vercel.app/images/projectImages'],
 			}
 		}),
   },
