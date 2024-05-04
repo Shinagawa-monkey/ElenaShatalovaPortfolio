@@ -76,12 +76,8 @@
     },
   ];
 
-  // Define a variable to hold the Swiper instance
-  let swiperInstance;
-
   // Function to initialize Swiper
-  function initSwiper() {
-    swiperInstance = new Swiper('.swiper', {
+  const swiper = new Swiper('.swiper', {
       grabCursor: true,
       effect: 'creative',
       creativeEffect: {
@@ -96,14 +92,6 @@
       loop: true,
       autoHeight: true
     });
-  }
-
-  // Function to destroy Swiper instance
-  function destroySwiper() {
-    if (swiperInstance && swiperInstance.destroy) {
-      swiperInstance.destroy();
-    }
-  }
 
   // Call initSwiper when the component is mounted
   onMount(initSwiper);
