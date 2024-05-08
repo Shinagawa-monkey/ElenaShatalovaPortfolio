@@ -83,7 +83,7 @@ Enjoy exploring my portfolio showcasing web development projects, skills, and ac
 
 Thank you for visiting my portfolio! Let's innovate together and create amazing solutions.
 
---=
+---
 
 ## Color Themes
 
