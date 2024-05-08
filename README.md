@@ -2,11 +2,11 @@
 
 Welcome to Elena Shatalova's Developer Portfolio! Explore my collection of projects, skills, and achievements in software engineering and full-stack development.
 
-## 𝐓𝐞𝐜𝐡𝐧𝐢𝐜𝐚𝐥 𝐒𝐤𝐢𝐥𝐥𝐬 𝐚𝐧𝐝 𝐓𝐨𝐨𝐥𝐬
+## Technical Skills and Tools
 
-JavaScript, HTML5, CSS3, SQL, React, Node.js, MongoDB, Mongoose, Express, Bootstrap, jQuery,  npm, nvm, Git, GitHub, Unix CLI, Bash, EJS, WordPress, Elementor, Drupal, MAMP, PopSQL, Studio 3T, Postman, Hyper, WSL, Heroku.
+React, SvelteKit, Node.js, MongoDB, Mongoose, Express, JavaScript, HTML5, CSS3, SQL, Bootstrap, Tailwind CSS, jQuery, Swiper, npm, nvm, Git, GitHub, Unix CLI, Bash, EJS, WordPress, Elementor, Drupal, MAMP, PopSQL, Firebase, Firestore, Studio 3T, Postman, Hyper, WSL, Heroku, Threlte.
 
-## 𝐖𝐨𝐫𝐤𝐢𝐧𝐠 𝐤𝐧𝐨𝐰𝐥𝐞𝐝𝐠𝐞: 
+## Working knowledge: 
 
 PHP, Ruby, Angular, NestJS, Motoko, Web3 DApp, Redux, Data structures and algorithms, REST APIs. 
 
@@ -51,6 +51,7 @@ Explore my portfolio by visiting [Elena Shatalova's Portfolio](https://elena-sha
 5. Access the app at `http://localhost:3000`
 
 ### Achievements
+
 - Designed the front end of the web applications for 38+ marketing campaigns using React, HTML, CSS, JavaScript, and Bootstrap 5.
 - Developed app integration for 42+ applications with REST APIs for Google Maps, social media logins using OAuth 2.0, and other services.
 - Managed, optimized, and updated SQL and NoSQL databases for 23+ applications.
@@ -58,6 +59,7 @@ Explore my portfolio by visiting [Elena Shatalova's Portfolio](https://elena-sha
 - Contributed to Zero To Mastery open-source projects.
 
 ### Education
+
 **Udemy - Build Web Apps with React & Firebase: Sep 2023 - Jan 2024 (Grade: A).** Skills: React.js, Firebase Storage, User Authentication, Routers, API, React Hooks.
 **Udemy - Master the Coding Interview: Data Structures + Algorithms: Nov 2022 - Jan 2023 (Grade: A).** Skills: Skills: Big O, Dynamic Programming, Algorithms, Data Structures, JavaScript.
 **Udemy - The Complete 2022 Web Development Bootcamp: Nov 2021 - Nov 2022 (Grade: A).** 
@@ -70,6 +72,7 @@ Skills: HTML, CSS, JavaScript, Git, Vue.js, D3, Command Line.
 Skills: HTML, CSS, JavaScript, React + Redux, jQuery, SQL, PHP, Responsive Web Design, Angular + NestJS, Coding for Marketers, Game Development with JS, Ruby, Web Development.
 
 ### Get in Touch
+
 Feel free to reach out to me for collaboration, freelance opportunities, or just to connect! You can contact me via [email](mailto:elenashatalova.it@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/elena-shatalova/).
 
 ---
