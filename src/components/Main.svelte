@@ -44,7 +44,7 @@
   ];
 
   let steps = [
-    {name: 'Tasty Treats', icon: 'fa-solid fa-bowl-food', href: 'https://tasty-treats-site.web.app/', technologies: 'React, Firebase, Cloud Firestore, Bootstrap, Axios,  TheMealDB API'},
+    {name: 'Tasty Treats', icon: 'fa-solid fa-bowl-food', href: 'https://tasty-treats-site.web.app/', technologies: 'React, Firebase, Cloud Firestore, Bootstrap, Axios, TheMealDB API'},
     {name: 'ProjectHub', icon: 'fa-solid fa-circle-check', href: 'https://project-hub-site.web.app/', technologies: 'React, Firebase, Cloud Firestore, Bootstrap, React Router, date-fns'},
     {name: 'My Wallet', icon: 'fa-solid fa-wallet', href: 'https://my-wallet-site.web.app/', technologies: 'React, Firebase, Cloud Firestore, Bootstrap, React Router'},
   ];
