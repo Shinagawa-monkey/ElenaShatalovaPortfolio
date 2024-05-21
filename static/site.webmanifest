@@ -1,6 +1,6 @@
 {
-    "name": "Tasty Treats",
-    "short_name": "Tasty Treats",
+    "name": "Elena Shatalova's Portfolio",
+    "short_name": "Elena's Portfolio",
     "icons": [
         {
             "src": "%sveltekit.assets%/android-chrome-192x192.png",
