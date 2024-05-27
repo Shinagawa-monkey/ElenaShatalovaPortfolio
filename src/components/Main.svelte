@@ -52,15 +52,15 @@
   let benefits = [
     { 
       year: "Today", 
-      title: "Solo Developer", 
-      duration: "1 year", 
-      details: "As a solo developer, I specialize in crafting software solutions tailored for both personal and client projects. Each project involves a comprehensive approach, starting from strategic planning and design, and concluding with the practical implementation of solutions to real-world challenges using code." 
+      title: "Open Source Contributions", 
+      duration: "2 years", 
+      details: "I contributed to open-source projects, which provided me with invaluable experience in collaborative coding and problem-solving within a community. Notable contributions include: Zero to Mastery: Solved tasks related to JavaScript data structures and algorithms, and facilitated peer learning through scheduled reviews on Discord." 
     },
     { 
       year: "Today", 
-      title: "Full Stack Developer", 
+      title: "Building a Strong Foundation", 
       duration: "4 years", 
-      details: "Over the past three years, I've thrived as a Full Stack Developer, actively contributing to digital marketing projects. My responsibilities include integrating apps using REST and various APIs, reviewing and debugging code on both the front-end and back-end, and effectively managing SQL and NoSQL databases. Proficient in a diverse tech stack, including JavaScript, TypeScript, MongoDB, Express.js, React, SvelteKit, and other complementary languages and tools." 
+      details: "With a solid foundation in web development, I began applying my skills to real-world projects. During this period, I developed various applications, honing my abilities in both front-end and back-end technologies. I explored new frameworks and tools, gradually building a diverse portfolio of projects." 
     },
     { 
       year: "2020", 
