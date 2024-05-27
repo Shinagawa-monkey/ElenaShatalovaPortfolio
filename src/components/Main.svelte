@@ -52,15 +52,9 @@
   let benefits = [
     { 
       year: "Today", 
-      title: "Open Source Contributor", 
+      title: "Open Source Projects", 
       duration: "2 years", 
       details: "Contributed to Zero to Mastery's Open-Source Project: solved tasks related to JavaScript data structures and algorithms, demonstrating strong problem-solving skills and fundamental programming knowledge. Facilitated Peer Learning: conducted code reviews on Discord, fostering a collaborative learning environment and showcasing my communication and teamwork abilities." 
-    },
-    { 
-      year: "Today", 
-      title: "Building My MERN Stack", 
-      duration: "4 years", 
-      details: "Developed 2 MERN Stack Applications: Keeper App: User-friendly note-taking app for efficient idea capture and organization. Swag Shop: E-commerce application allowing users to browse products and manage wishlists." 
     },
     { 
       year: "2020", 
