@@ -52,7 +52,7 @@
   let benefits = [
     { 
       year: "Today", 
-      title: "Building & Collaborating", 
+      title: "Build & Contribute", 
       duration: "2 years", 
       details: "Developed personal projects utilizing the MERN stack and React + Firebase. Contributed to Zero to Mastery's open-source project, demonstrating problem-solving skills and fundamental programming knowledge. Facilitated peer learning through code reviews on Discord, fostering collaboration and communication skills." 
     },
