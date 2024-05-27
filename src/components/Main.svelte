@@ -52,15 +52,15 @@
   let benefits = [
     { 
       year: "Today", 
-      title: "Open Source Contributions", 
+      title: "Open Source Contributor", 
       duration: "2 years", 
-      details: "I contributed to open-source projects, which provided me with invaluable experience in collaborative coding and problem-solving within a community. Notable contributions include: Zero to Mastery: Solved tasks related to JavaScript data structures and algorithms, and facilitated peer learning through scheduled reviews on Discord." 
+      details: "Contributed to Zero to Mastery's Open-Source Project: solved tasks related to JavaScript data structures and algorithms, demonstrating strong problem-solving skills and fundamental programming knowledge. Facilitated Peer Learning: conducted code reviews on Discord, fostering a collaborative learning environment and showcasing my communication and teamwork abilities." 
     },
     { 
       year: "Today", 
-      title: "Building a Strong Foundation", 
+      title: "Building My MERN Stack", 
       duration: "4 years", 
-      details: "With a solid foundation in web development, I began applying my skills to real-world projects. During this period, I developed various applications, honing my abilities in both front-end and back-end technologies. I explored new frameworks and tools, gradually building a diverse portfolio of projects." 
+      details: "Developed 2 MERN Stack Applications: Keeper App: User-friendly note-taking app for efficient idea capture and organization. Swag Shop: E-commerce application allowing users to browse products and manage wishlists." 
     },
     { 
       year: "2020", 
