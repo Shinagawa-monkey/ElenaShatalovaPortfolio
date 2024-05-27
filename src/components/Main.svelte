@@ -54,19 +54,19 @@
       year: "Today", 
       title: "Building & Collaborating", 
       duration: "2 years", 
-      details: "MERN Stack Projects: Developed personal projects utilizing the MERN stack and React + Firebase. Open Source Contribution: contributed to Zero to Mastery's open-source project, demonstrating problem-solving skills and fundamental programming knowledge. Community Code Reviews: Facilitated peer learning through code reviews on Discord, fostering collaboration and communication skills." 
+      details: "Developed personal projects utilizing the MERN stack and React + Firebase. Contributed to Zero to Mastery's open-source project, demonstrating problem-solving skills and fundamental programming knowledge. Facilitated peer learning through code reviews on Discord, fostering collaboration and communication skills." 
     },
     { 
       year: "2020", 
       title: "Full-Stack Foundations", 
       duration: "4 years", 
-      details: "Skill Acquisition: Completed online courses in data structures, algorithms, and full-stack web development. I completed courses such as BitDegree's Web Developer learning path, Sololearn's Full Stack Web Developer learning path, and Codecademy's Web Development Career Path. Further expanding my skills, I pursued additional courses on Udemy, including \"The Complete 2022 Web Development Bootcamp,\" \"Master the Coding Interview: Data Structures + Algorithms\", and \"Build Web Apps with React & Firebase\". MERN Stack Focus: Focused on mastering the MERN stack (MongoDB, Express.js, React.js, Node.js) through coursework and personal projects." 
+      details: "Completed online courses in data structures, algorithms, and full-stack web development. I completed courses such as BitDegree's Web Developer learning path, Sololearn's Full Stack Web Developer learning path, and Codecademy's Web Development Career Path. Further expanding my skills, I pursued additional courses on Udemy, including \"The Complete 2022 Web Development Bootcamp,\" \"Master the Coding Interview: Data Structures + Algorithms\", and \"Build Web Apps with React & Firebase\". Focused on mastering the MERN stack (MongoDB, Express.js, React.js, Node.js) through coursework and personal projects." 
     },
     { 
       year: "2019", 
       title: "First Line of Code", 
       duration: "the beginning", 
-      details: "I wrote my first line of code, marking the beginning of my journey into digital craftsmanship. This pivotal moment, especially surprising for someone who had previously identified in a non-technical realm, laid the foundation for my substantial professional growth." 
+      details: "I wrote my first line of code, marking the beginning of my journey into web development and digital craftsmanship. This pivotal moment, especially surprising for someone who had previously identified in a non-technical realm, laid the foundation for my substantial professional growth." 
     },
   ];
 
