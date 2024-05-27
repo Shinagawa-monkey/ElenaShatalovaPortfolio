@@ -52,15 +52,15 @@
   let benefits = [
     { 
       year: "Today", 
-      title: "Open Source Projects", 
+      title: "Building & Collaborating", 
       duration: "2 years", 
-      details: "Contributed to Zero to Mastery's Open-Source Project: solved tasks related to JavaScript data structures and algorithms, demonstrating strong problem-solving skills and fundamental programming knowledge. Facilitated Peer Learning: conducted code reviews on Discord, fostering a collaborative learning environment and showcasing my communication and teamwork abilities." 
+      details: "MERN Stack Projects: Developed personal projects utilizing the MERN stack and React + Firebase. Open Source Contribution: contributed to Zero to Mastery's open-source project, demonstrating problem-solving skills and fundamental programming knowledge. Community Code Reviews: Facilitated peer learning through code reviews on Discord, fostering collaboration and communication skills." 
     },
     { 
       year: "2020", 
-      title: "Tech Education", 
+      title: "Full-Stack Foundations", 
       duration: "4 years", 
-      details: "Starting in 2020, I embarked on an intensive learning path covering data structures, algorithms, and full-stack web development. I completed courses such as BitDegree's Web Developer learning path, Sololearn's Full Stack Web Developer learning path, and Codecademy's Web Development Career Path. Further expanding my skills, I pursued additional courses on Udemy, including \"The Complete 2022 Web Development Bootcamp,\" \"Master the Coding Interview: Data Structures + Algorithms\", and \"Build Web Apps with React & Firebase\"." 
+      details: "Skill Acquisition: Completed online courses in data structures, algorithms, and full-stack web development. I completed courses such as BitDegree's Web Developer learning path, Sololearn's Full Stack Web Developer learning path, and Codecademy's Web Development Career Path. Further expanding my skills, I pursued additional courses on Udemy, including \"The Complete 2022 Web Development Bootcamp,\" \"Master the Coding Interview: Data Structures + Algorithms\", and \"Build Web Apps with React & Firebase\". MERN Stack Focus: Focused on mastering the MERN stack (MongoDB, Express.js, React.js, Node.js) through coursework and personal projects." 
     },
     { 
       year: "2019", 
