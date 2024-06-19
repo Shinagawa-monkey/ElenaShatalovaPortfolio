@@ -4,7 +4,7 @@ Welcome to Elena Shatalova's Developer Portfolio! Explore my collection of proje
 
 ## Technical Skills and Tools
 
-React, SvelteKit, Node.js, MongoDB, Mongoose, Express, JavaScript, HTML5, CSS3, SQL, Bootstrap, Tailwind CSS, jQuery, Swiper, npm, nvm, Git, GitHub, Unix CLI, Bash, EJS, WordPress, Elementor, Drupal, MAMP, PopSQL, Firebase, Firestore, Studio 3T, Postman, Hyper, WSL, Heroku, Threlte.
+SvelteKit, Tailwind CSS, Nodemailer, Swiper, Threlte.
 
 ## Working knowledge: 
 
